@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce54v5i74rsoe"]
+
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_21fj5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21fj5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32.0031, 17.9997)
+color = Color(0.980392, 1, 0.513726, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 330.0
+offset_right = 641.0
+offset_bottom = 361.0
+scale = Vector2(4, 4)
+text = "Play"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
