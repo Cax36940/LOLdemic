@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://co3kaibwrnuum"]
+[gd_scene load_steps=8 format=3 uid="uid://co3kaibwrnuum"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_6k5bf"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_wwe4b"]
+[ext_resource type="PackedScene" uid="uid://bs1gnssei07d3" path="res://banane/banane.tscn" id="3_0mu7t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovngv"]
 texture = ExtResource("1_6k5bf")
@@ -358,7 +359,6 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 2, 131072, 196
 
 [node name="Player" parent="People" instance=ExtResource("2_wwe4b")]
 position = Vector2(457, 467)
-laughing = 1.5
 
 [node name="Player2" parent="People" instance=ExtResource("2_wwe4b")]
 position = Vector2(493, 547)
@@ -368,7 +368,6 @@ position = Vector2(878, 173)
 
 [node name="Player4" parent="People" instance=ExtResource("2_wwe4b")]
 position = Vector2(136, 174)
-laughing = 1.0
 
 [node name="Player5" parent="People" instance=ExtResource("2_wwe4b")]
 position = Vector2(162, 511)
@@ -417,3 +416,6 @@ position = Vector2(263, 273)
 
 [node name="Player20" parent="People" instance=ExtResource("2_wwe4b")]
 position = Vector2(763, 378)
+
+[node name="Banane" parent="." instance=ExtResource("3_0mu7t")]
+position = Vector2(390, 429)
