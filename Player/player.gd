@@ -5,12 +5,16 @@ extends CharacterBody2D
 var speed = 1.
 var dx = 0
 var dy = 0
+var controlled = false
+var distance = randf() * PI #pour l'animation, potentiellement à optimiser
+var timer = randf() * PI #pour l'animation, potentiellement à optimiser
+
+
 var CHANGE_MOVE_PROB = 0.01
 var LAUGH_TIME = 10. # temps de parcours linéaire de la jauge 2
 var SPREAD_RADIUS = 150 # rayon au delà duquel la contagion est impossible
 var SPREAD_RATE_COEF = 0.04 # 1/nb de tours pour remplir la jauge 1 avec une contagion max (laughing = 2)
-
-
+var SPRITE_POSITION_Y = -16 # pour l'animation mais vraiment meh
 
 
 
@@ -53,21 +57,30 @@ func laugh():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	
 	if not is_laughing():
 		# Blanc -> magenta
+		$Sprite2D.rotation = 0.1 * sin(distance * 2 )
 		modulate = Color(1., min(1.-laughing, 1.), 1.)
 	else:
 		# Jaune -> noir
 		modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
-	
-	if is_laughing():
+		timer += delta
+		$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * laughing * 10)
+		
 		laugh()
 		laughing = move_toward(laughing, 2., delta / LAUGH_TIME)
 		speed = 2-laughing # 1.0 - 0.0 (laugh++ -> speed--)
-	
-	if randf() < CHANGE_MOVE_PROB:
-		rand_move()
-	move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
+
+
+	# ------------------------------ MOVEMENT ----------------------------------
+	if controlled:
+		pass
+	elif not laughing >= 2:
+		if randf() < CHANGE_MOVE_PROB:
+			rand_move()
+		distance += sqrt(dx**2 + dy**2) * delta
+		move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
 	
 
 
