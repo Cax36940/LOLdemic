@@ -83,7 +83,6 @@ func _process(delta):
 			rand_move()
 		distance += sqrt(dx**2 + dy**2) * delta
 		move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
-	
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

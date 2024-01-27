@@ -12,6 +12,9 @@ func _ready():
 func move_pointer(rate):
 	$Pointer.position.y = 144 * (1 - rate)
 
+func is_in_interval():
+	return abs(rate-1.) <= nice
+
 func get_laughing():
 	var people = get_node("../../LevelLoader/Level_Base/People").get_children()
 	var l = 0
