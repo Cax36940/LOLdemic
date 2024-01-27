@@ -30,12 +30,14 @@ func get_buttons_states():
 
 
 
-
 func _on_button_pressed(button_index):
-	print(button_index)
+	if get_node("Button"+str(button_index)).button_pressed == true:
+		state = button_index
+	else:
+		state = NO_BUTTON
 	release_buttons(button_index)
 
 
 func _on_button_1_toggled(toggled_on):
 	if toggled_on == false:
-		get_node("..").uncontrol()
+		get_node("/root/World").uncontrol()
