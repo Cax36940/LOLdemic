@@ -17,8 +17,17 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if (event.is_action_released("escape")):
+	if event.is_action_released("escape"):
 		pause_unpause()
+	if event is InputEventMouseButton and event.pressed:
+		print(event.position)
+		place_banana(event.position)
+
+func place_banana(pos):
+	print(interface==null)
+	if interface != null and interface.state == BANANA:
+		level.add_child(load("res://banane/banane.tscn").instantiate())
+		interface.button_press(BANANA)
 
 func pause_unpause():
 	pause = not pause
