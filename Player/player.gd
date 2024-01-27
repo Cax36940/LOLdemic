@@ -22,7 +22,8 @@ var SPRITE_POSITION_Y = -16 # pour l'animation mais vraiment meh
 func _ready():
 	rand_move()
 
-
+func uncontrol():
+	controlled = false
 
 func dist(p):
 	return sqrt((p.position.x-position.x)**2 + (p.position.y-position.y)**2)
@@ -40,7 +41,7 @@ func is_laughing():
 	return laughing >= 1.
 
 func triggered(rate):
-	if not is_laughing():
+	if not is_laughing() and not controlled:
 		laughing = move_toward(laughing, 2., rate)
 
 func get_neighbors():
@@ -75,7 +76,8 @@ func _process(delta):
 
 	# ------------------------------ MOVEMENT ----------------------------------
 	if controlled:
-		pass
+		var input_direction = Input.get_vector("left", "right", "up", "down")
+		move_and_collide(input_direction * speed * MAX_SPEED * delta)
 	elif not laughing >= 2:
 		if randf() < CHANGE_MOVE_PROB:
 			rand_move()
@@ -86,7 +88,14 @@ func _process(delta):
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton and event.pressed):
-		if laughing < 1.:
-			laughing = 1.
-		else:
+		var main = get_node("/root/World")
+		if main.is_input_contamination(): 
+			if laughing < 1.:
+				laughing = 1.
+			else:
+				laughing = 0.
+				timer = 0.
+		if main.is_input_control(self): 
 			laughing = 0.
+			timer = 0
+			controlled = true
