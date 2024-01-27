@@ -28,6 +28,14 @@ func release_buttons(except_index):
 func get_buttons_states():
 	return [$Button1.button_pressed, $Button2.button_pressed, $Button3.button_pressed, $Button4.button_pressed]
 
+
+
+
 func _on_button_pressed(button_index):
 	print(button_index)
 	release_buttons(button_index)
+
+
+func _on_button_1_toggled(toggled_on):
+	if toggled_on == false:
+		get_node("..").uncontrol()

@@ -126,6 +126,7 @@ toggle_mode = true
 icon = ExtResource("1_t320a")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="toggled" from="Button1" to="." method="_on_button_1_toggled"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed" binds= [2]]
 [connection signal="pressed" from="Button3" to="." method="_on_button_pressed" binds= [3]]
 [connection signal="pressed" from="Button4" to="." method="_on_button_pressed" binds= [4]]
