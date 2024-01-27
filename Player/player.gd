@@ -8,7 +8,7 @@ var dy = 0
 var controlled = false
 var distance = randf() * PI #pour l'animation, potentiellement à optimiser
 var timer = randf() * PI #pour l'animation, potentiellement à optimiser
-
+var fallen = false
 
 var CHANGE_MOVE_PROB = 0.01
 var LAUGH_TIME = 10. # temps de parcours linéaire de la jauge 2
@@ -24,6 +24,13 @@ func _ready():
 
 func uncontrol():
 	controlled = false
+
+func fall():
+	fallen = true
+	rotation = PI / 2
+	laughing = 0.
+	timer = 0. # techniquement inutile right now si il se relève jamais
+	laugh(1.)
 
 func dist(p):
 	return sqrt((p.position.x-position.x)**2 + (p.position.y-position.y)**2)
@@ -41,7 +48,7 @@ func is_laughing():
 	return laughing >= 1.
 
 func triggered(rate):
-	if not is_laughing() and not controlled:
+	if not is_laughing() and not controlled and not fallen:
 		laughing = move_toward(laughing, 2., rate)
 
 func get_neighbors():
@@ -51,38 +58,38 @@ func get_neighbors():
 			neigh.append(p)
 	return neigh
 
-func laugh():
+func laugh(rate):
 	for p in get_neighbors():
-		p.triggered((laughing-1) * SPREAD_RATE_COEF)
+		p.triggered(rate)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	
-	if not is_laughing():
-		# Blanc -> magenta
-		$Sprite2D.rotation = 0.1 * sin(distance * 2 )
-		modulate = Color(1., min(1.-laughing, 1.), 1.)
-	else:
-		# Jaune -> noir
-		modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
-		timer += delta
-		$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * laughing * 10)
-		
-		laugh()
-		laughing = move_toward(laughing, 2., delta / LAUGH_TIME)
-		speed = 2-laughing # 1.0 - 0.0 (laugh++ -> speed--)
+	if not fallen:
+		if not is_laughing():
+			# Blanc -> magenta
+			$Sprite2D.rotation = 0.1 * sin(distance * 2 )
+			# modulate = Color(1., min(1.-laughing, 1.), 1.)
+		else:
+			# Jaune -> noir
+			# modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
+			timer += delta
+			$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * laughing * 10)
+			
+			laugh((laughing-1) * SPREAD_RATE_COEF)
+			laughing = move_toward(laughing, 2., delta / LAUGH_TIME)
+			speed = 2-laughing # 1.0 - 0.0 (laugh++ -> speed--)
 
 
 	# ------------------------------ MOVEMENT ----------------------------------
-	if controlled:
-		var input_direction = Input.get_vector("left", "right", "up", "down")
-		move_and_collide(input_direction * speed * MAX_SPEED * delta)
-	elif not laughing >= 2:
-		if randf() < CHANGE_MOVE_PROB:
-			rand_move()
-		distance += sqrt(dx**2 + dy**2) * delta
-		move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
+		if controlled:
+			var input_direction = Input.get_vector("left", "right", "up", "down")
+			move_and_collide(input_direction * speed * MAX_SPEED * delta)
+		elif not laughing >= 2:
+			if randf() < CHANGE_MOVE_PROB:
+				rand_move()
+			distance += sqrt(dx**2 + dy**2) * delta
+			move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

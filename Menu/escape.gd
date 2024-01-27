@@ -11,6 +11,15 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	get_parent().load_game()
-	queue_free()
+
+
+func _on_resume_button_pressed():
+	get_node("/root/World").pause_unpause()
+
+
+func _on_restart_button_pressed():
+	get_node("/root/World").restart()
+
+
+func _on_quit_button_pressed():
+	get_node("/root/World").quit_level()
