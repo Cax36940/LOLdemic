@@ -13,18 +13,24 @@ script = ExtResource("1_21fj5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(32.0031, 17.9997)
+offset_right = 1301.0
+offset_bottom = 801.0
 color = Color(0.980392, 1, 0.513726, 1)
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 330.0
-offset_right = 641.0
-offset_bottom = 361.0
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(4, 4)
 text = "Play"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
