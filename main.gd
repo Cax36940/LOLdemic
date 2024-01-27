@@ -26,7 +26,9 @@ func _input(event):
 func place_banana(pos):
 	print(interface==null)
 	if interface != null and interface.state == BANANA:
-		level.add_child(load("res://banane/banane.tscn").instantiate())
+		var banana = load("res://banane/banane.tscn").instantiate()
+		level.add_child(banana)
+		banana.position = pos
 		interface.button_press(BANANA)
 
 func pause_unpause():

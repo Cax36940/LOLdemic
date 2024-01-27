@@ -31,6 +31,7 @@ func fall():
 	laughing = 0.
 	timer = 0. # techniquement inutile right now si il se relève jamais
 	laugh(2.)
+	$CPUParticles2D.visible = false
 
 func dist(p):
 	return sqrt((p.position.x-position.x)**2 + (p.position.y-position.y)**2)
