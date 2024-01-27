@@ -9,8 +9,8 @@ var GOAL = 10
 func _ready():
 	pass
 
-func move_pointer(rate):
-	$Pointer.position.y = 144 * (1 - rate)
+func move_pointer(this_rate):
+	$Pointer.position.y = 144 * (1 - this_rate)
 
 func is_in_interval():
 	return abs(rate-1.) <= nice
@@ -24,7 +24,7 @@ func get_laughing():
 	return l
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$Label.text = str(GOAL)
 	rate = float(get_laughing()) / GOAL
 	move_pointer(rate)

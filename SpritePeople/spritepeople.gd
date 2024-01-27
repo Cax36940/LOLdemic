@@ -1,98 +1,147 @@
 @tool
 extends Node2D
 
+
+var is_ready : bool = Engine.is_editor_hint()
+
 @export_category("Perso")
+@export var init_people_randomly : bool = true
 @export var skin_color : Color = Color("f7b08e"):
 	set(new_color):
 		skin_color = new_color
-		$Sprite/Skin.modulate = new_color
-
-		
+		if is_ready:
+			code["skin_color_r"] = skin_color.r
+			code["skin_color_g"] = skin_color.g
+			code["skin_color_b"] = skin_color.b
+			code = code
+			$Sprite/Skin.modulate = skin_color
+			
 @export_group("Face")
 @export var eyer_frame : int = 0 :
 	set(new_reye):
 		eyer_frame = clamp(new_reye, 0, 19)
-		$Sprite/Face/EyeR.frame = eyer_frame
+		if is_ready:
+			code["eyer_frame"] = eyer_frame
+			code = code
+			$Sprite/Face/EyeR.frame = eyer_frame
 
 @export var eyel_frame : int = 0 :
 	set(new_leye):
 		eyel_frame = clamp(new_leye, 0, 19)
-		$Sprite/Face/EyeL.frame = eyel_frame
+		if is_ready:
+			code["eyel_frame"] = eyel_frame
+			code = code
+			$Sprite/Face/EyeL.frame = eyel_frame
 		
 		
 @export var eyelash_color : int = 0 :
 	set(new_color):
 		eyelash_color = clamp(new_color, 0, 4)
-		$Sprite/Face/EyelashL.frame = eyelash_color
-		$Sprite/Face/EyelashR.frame = eyelash_color
+		if is_ready:
+			code["eyelash_color"] = eyelash_color
+			code = code
+			$Sprite/Face/EyelashL.frame = eyelash_color
+			$Sprite/Face/EyelashR.frame = eyelash_color
 
 @export var mouth_frame : int = 0 :
 	set(new_mouth):
 		mouth_frame = clamp(new_mouth, 0, 2)
-		$Sprite/Face/Mouth.frame = mouth_frame
+		if is_ready:
+			code["mouth_frame"] = mouth_frame
+			code = code
+			$Sprite/Face/Mouth.frame = mouth_frame
 
 @export_group("Clothes")
 @export var neck_frame : int = 0 :
 	set(new_neck):
 		neck_frame = clamp(new_neck, 0, 9)
-		$Sprite/Clothes/Neck.frame = neck_frame
-		$Sprite/Clothes/Neck.visible = (shirt_frame == 0 or neck_frame < 2)
+		if is_ready:
+			code["neck_frame"] = neck_frame
+			code = code
+			$Sprite/Clothes/Neck.frame = neck_frame
+			$Sprite/Clothes/Neck.visible = (shirt_frame == 0 or neck_frame < 2)
 
 @export var neck_color : Color = Color("aaaaaa"):
 	set(new_color):
 		neck_color = new_color
-		$Sprite/Clothes/Neck.modulate = new_color
+		if is_ready:
+			code["neck_color_r"] = neck_color.r
+			code["neck_color_g"] = neck_color.g
+			code["neck_color_b"] = neck_color.b
+			code = code
+			$Sprite/Clothes/Neck.modulate = new_color
 
 @export var hair_frame : int = 0 :
 	set(new_frame):
 		hair_frame = clamp(new_frame, 0, 3)
-		$Sprite/Hair.frame = hair_frame
-		update_line()
+		if is_ready:
+			code["hair_frame"] = hair_frame
+			code = code
+			$Sprite/Hair.frame = hair_frame
+			update_line()
 
 @export var hair_color : Color = Color("482d00"):
 	set(new_color):
 		hair_color = new_color
-		$Sprite/Hair.modulate = new_color
+		if is_ready:
+			code["hair_color_r"] = hair_color.r
+			code["hair_color_g"] = hair_color.g
+			code["hair_color_b"] = hair_color.b
+			code = code
+			$Sprite/Hair.modulate = new_color
 
 		
 @export var shirt_frame : int = 0 :
 	set(new_frame):
 		shirt_frame = clamp(new_frame, 0, 1)
-		$Sprite/Clothes/Shirt.frame = shirt_frame
-		$Sprite/Clothes/Pants.visible = (shirt_frame == 0)
-		$Sprite/Clothes/Shoes.visible = (shirt_frame == 0)
-		$Sprite/Clothes/Neck.visible = (shirt_frame == 0 or neck_frame < 2)
-		update_line()
+		if is_ready:
+			code["shirt_frame"] = shirt_frame
+			code = code
+			$Sprite/Clothes/Shirt.frame = shirt_frame
+			$Sprite/Clothes/Pants.visible = (shirt_frame == 0)
+			$Sprite/Clothes/Shoes.visible = (shirt_frame == 0)
+			$Sprite/Clothes/Neck.visible = (shirt_frame == 0 or neck_frame < 2)
+			update_line()
 
 @export var shirt_color : Color = Color("a0b8ef"):
 	set(new_color):
 		shirt_color = new_color
-		$Sprite/Clothes/Shirt.modulate = new_color
+		if is_ready:
+			code["shirt_color_r"] = shirt_color.r
+			code["shirt_color_g"] = shirt_color.g
+			code["shirt_color_b"] = shirt_color.b
+			code = code
+			$Sprite/Clothes/Shirt.modulate = new_color
 
 @export var pants_frame : int = 0 :
 	set(new_frame):
 		pants_frame = clamp(new_frame, 0, 1)
-		$Sprite/Clothes/Pants.frame = pants_frame
-		update_line()
+		if is_ready:
+			code["pants_frame"] = pants_frame
+			code = code
+			$Sprite/Clothes/Pants.frame = pants_frame
+			update_line()
 
 @export var pants_color : Color = Color("101d43"):
 	set(new_color):
 		pants_color = new_color
-		$Sprite/Clothes/Pants.modulate = new_color
+		if is_ready:
+			code["pants_color_r"] = pants_color.r
+			code["pants_color_g"] = pants_color.g
+			code["pants_color_b"] = pants_color.b
+			code = code
+			$Sprite/Clothes/Pants.modulate = new_color
 
 @export_category("Generator")
 
 @export var rand_skin_color : bool = false :
-	# Update speed and reset the rotation.
 	set(new_state):
 		rand_skin_color = new_state
 		if new_state:
 			skin_color = SKIN_TONES[randi_range(0,19)]
-			print(skin_color)
 			rand_skin_color = false
 			
 @export var rand_eye : bool = false :
-	# Update speed and reset the rotation.
 	set(new_state):
 		rand_eye = new_state
 		if new_state:
@@ -100,7 +149,6 @@ extends Node2D
 			rand_eye = false
 			
 @export var rand_hair_color : bool = false :
-	# Update speed and reset the rotation.
 	set(new_state):
 		rand_hair_color = new_state
 		if new_state:
@@ -112,7 +160,6 @@ extends Node2D
 			rand_hair_color = false
 
 @export var rand_clothes : bool = false :
-	# Update speed and reset the rotation.
 	set(new_state):
 		rand_clothes = new_state
 		if new_state:
@@ -125,7 +172,6 @@ extends Node2D
 			rand_clothes = false
 
 @export var rand_people : bool = false :
-	# Update speed and reset the rotation.
 	set(new_state):
 		rand_people = new_state
 		if new_state:
@@ -135,6 +181,85 @@ extends Node2D
 			rand_hair_color = true
 			rand_skin_color = true
 			rand_people = false
+
+
+@export_category("Export Player")
+@export var export_code : String = ""
+@export var import_code : String = "" :
+	set(new_code):
+		var json = JSON.new()
+		var error = json.parse(new_code)
+		if error == OK:
+			var data_received = json.data
+			for v in data_received:
+				if "skin_color_r" in data_received :
+					skin_color.r = data_received["skin_color_r"]
+				if "skin_color_g" in data_received :
+					skin_color.g = data_received["skin_color_g"]
+				if "skin_color_b" in data_received :
+					skin_color.b = data_received["skin_color_b"]
+					
+				if "eyer_frame" in data_received :	
+					eyer_frame = data_received["eyer_frame"]
+					
+				if "eyel_frame" in data_received :	
+					eyel_frame = data_received["eyel_frame"]
+					
+				if "eyelash_color" in data_received :
+					eyelash_color = data_received["eyelash_color"]
+					
+				if "mouth_frame" in data_received :
+					mouth_frame = data_received["mouth_frame"]
+					
+				if "neck_frame" in data_received :
+					neck_frame = data_received["neck_frame"]
+				if "neck_color_r" in data_received :
+					neck_color.r = data_received["neck_color_r"]
+				if "neck_color_g" in data_received :
+					neck_color.g = data_received["neck_color_g"]
+				if "neck_color_b" in data_received :
+					neck_color.b = data_received["neck_color_b"]
+					
+				if "hair_frame" in data_received :
+					hair_frame = data_received["hair_frame"]
+				if "hair_color_r" in data_received :
+					hair_color.r = data_received["hair_color_r"]
+				if "hair_color_g" in data_received :
+					hair_color.g = data_received["hair_color_g"]
+				if "hair_color_b" in data_received :
+					hair_color.b = data_received["hair_color_b"]
+					
+				if "shirt_frame" in data_received :
+					shirt_frame = data_received["shirt_frame"]
+				if "shirt_color_r" in data_received :
+					shirt_color.r = data_received["shirt_color_r"]
+				if "shirt_color_g" in data_received :
+					shirt_color.g = data_received["shirt_color_g"]
+				if "shirt_color_b" in data_received :
+					shirt_color.b = data_received["shirt_color_b"]
+					
+				if "pants_frame" in data_received :
+					pants_frame = data_received["pants_frame"]
+				if "pants_color_r" in data_received :
+					pants_color.r = data_received["pants_color_r"]
+				if "pants_color_g" in data_received :
+					pants_color.g = data_received["pants_color_g"]
+				if "pants_color_b" in data_received :
+					pants_color.b = data_received["pants_color_b"]
+		else :
+			print("JSON Parse Error: ", json.get_error_message(), " in ", code, " at line ", json.get_error_line())
+
+var code : Dictionary = {} :
+	set(new_code):
+		code = new_code
+		export_code = JSON.stringify(code)
+
+
+
+func _ready():
+	is_ready = true
+	rand_people = init_people_randomly 
+
 
 const SKIN_TONES = [
 	Color(1.0, 0.87, 0.73),    # Light skin tone
@@ -162,8 +287,6 @@ const SKIN_TONES = [
 var eyelash_r_pos : Vector2 = Vector2(3.5,-2.5)
 var eyelash_l_pos : Vector2 = Vector2(-3.5,-2.5)
 
-func _ready():
-	rand_people = true
 
 const EYE_LIST = [[1, 2, 3, 4], [5, 7], [6], [8], [9, 10, 11, 12], [13, 14], [0, 16, 17], [18, 19]]
 const EYELASH_L = [[0,1,2,3,4,5,6,7,8,9,10,11,12,14,18,19],[13],[15, 17],[16]]
@@ -198,4 +321,3 @@ func random_eye():
 func update_line():
 	$Sprite/Black.frame = 3 * shirt_frame + (hair_frame % 3)
 	$Sprite/White.frame = 3 * shirt_frame + (hair_frame % 3)
-
