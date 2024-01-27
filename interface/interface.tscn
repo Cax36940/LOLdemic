@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://interface/Timer.gd" id="4_rvgss"]
 
 [node name="Interface" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
