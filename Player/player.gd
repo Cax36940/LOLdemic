@@ -53,7 +53,13 @@ func laugh():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	modulate = Color(max(1-laughing, 0), max(1-laughing, 0), max(1-laughing, 0))
+	if not is_laughing():
+		# Blanc -> magenta
+		modulate = Color(1., min(1.-laughing, 1.), 1.)
+	else:
+		# Jaune -> noir
+		modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
+	
 	if is_laughing():
 		laugh()
 		laughing = move_toward(laughing, 2., delta / LAUGH_TIME)
@@ -63,3 +69,11 @@ func _process(delta):
 		rand_move()
 	move_and_collide(Vector2(dx * speed * MAX_SPEED * delta, dy * speed * MAX_SPEED * delta))
 	
+
+
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton and event.pressed):
+		if laughing < 1.:
+			laughing = 1.
+		else:
+			laughing = 0.

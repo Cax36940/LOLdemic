@@ -10,7 +10,7 @@ func _ready():
 	pass
 
 func move_pointer(rate):
-	$Pointer.position.x = 144 * rate
+	$Pointer.position.y = 144 * (1 - rate)
 
 func get_laughing():
 	var people = get_node("../../LevelLoader/Level_Base/People").get_children()
