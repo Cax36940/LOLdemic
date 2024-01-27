@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cma8l5ew46j3s"]
+[gd_scene load_steps=7 format=3 uid="uid://bg34emyrakyis"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_jt787"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_10x3s"]
@@ -337,6 +337,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2ex8s")
 
 [node name="Level_Base" type="Node2D"]
+metadata/GOAL = 10
 
 [node name="Background" type="Node2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bl8jl55j8aare"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cp5sp8w5fs5gl"]
 
 [ext_resource type="Texture2D" uid="uid://1osrsut0aadw" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/1 Tiles/Map_tiles.png" id="1_jid6i"]
 [ext_resource type="Texture2D" uid="uid://d3h10t6bmci7r" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Trees/1.png" id="2_4d4bu"]
@@ -567,3 +567,4 @@ texture_region_size = Vector2i(27, 44)
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_etj01")
 sources/1 = SubResource("TileSetAtlasSource_rkvti")
+metadata/GOAL = 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmmtqma2jiqy5"]
+[gd_scene load_steps=7 format=3 uid="uid://bs6cbh6ooqori"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_i6ehk"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_7xpab"]
@@ -337,7 +337,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2ex8s")
 
 [node name="Level_Hospital" type="Node2D"]
-metadata/GOAL = 1
+metadata/GOAL = 10
 
 [node name="Background" type="Node2D" parent="."]
 

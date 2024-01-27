@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://krnfuscmxrq1" path="res://player.png" id="2_istjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh8q"]
-size = Vector2(15.9999, 27.0001)
+size = Vector2(10.9091, 9.54545)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a656c"]
 size = Vector2(20, 31)
@@ -19,7 +19,7 @@ position = Vector2(0, -16)
 texture = ExtResource("2_istjn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15.5)
+position = Vector2(-2.16744e-07, -9.77273)
 shape = SubResource("RectangleShape2D_koh8q")
 
 [node name="Area2D" type="Area2D" parent="."]
