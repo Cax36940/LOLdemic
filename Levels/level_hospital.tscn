@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmmtqma2jiqy5"]
+[gd_scene load_steps=7 format=3 uid="uid://bs6cbh6ooqori"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_i6ehk"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_7xpab"]
@@ -337,6 +337,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2ex8s")
 
 [node name="Level_Hospital" type="Node2D"]
+metadata/GOAL = 10
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -348,6 +349,27 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 3, 65536, 131072, 4, 1, 196608, 
 [node name="Player" parent="Background/Decors" instance=ExtResource("2_7xpab")]
 position = Vector2(551, 667)
 laughing = 1.5
+
+[node name="Player2" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(87, 306)
+
+[node name="Player3" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(98, 83)
+
+[node name="Player4" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(274, 83)
+
+[node name="Player5" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(798, 69)
+
+[node name="Player6" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(455, 506)
+
+[node name="Player7" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(934, 665)
+
+[node name="Player8" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(851, 355)
 
 [node name="Wall" type="TileMap" parent="Background"]
 modulate = Color(1, 0, 0, 0.890196)

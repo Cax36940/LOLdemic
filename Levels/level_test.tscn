@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cot31f22r1pgc"]
+[gd_scene load_steps=7 format=3 uid="uid://cot31f22r1pgc"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_cjsat"]
+[ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_yglkm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovngv"]
 texture = ExtResource("1_cjsat")
@@ -353,3 +354,7 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 2, 131072, 196
 [node name="Foreground" type="Node2D" parent="."]
 
 [node name="People" type="Node2D" parent="."]
+
+[node name="Player" parent="People" instance=ExtResource("2_yglkm")]
+position = Vector2(823, 604)
+scale = Vector2(4, 4)

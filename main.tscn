@@ -5,7 +5,7 @@
 [node name="World" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_slnwn")
-level_name = "test2"
+level_name = "birthday"
 
 [node name="LevelLoader" type="Node2D" parent="."]
 process_mode = 1
