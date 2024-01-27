@@ -13,7 +13,7 @@ var fallen = false
 var CHANGE_MOVE_PROB = 0.01
 var LAUGH_TIME = 10. # temps de parcours linéaire de la jauge 2
 var SPREAD_RADIUS = 150 # rayon au delà duquel la contagion est impossible
-var SPREAD_RATE_COEF = 0.04 # 1/nb de tours pour remplir la jauge 1 avec une contagion max (laughing = 2)
+var SPREAD_RATE_COEF = 0.1 # 1/nb de tours pour remplir la jauge 1 avec une contagion max (laughing = 2)
 var SPRITE_POSITION_Y = -16 # pour l'animation mais vraiment meh
 
 
@@ -30,7 +30,7 @@ func fall():
 	rotation = PI / 2
 	laughing = 0.
 	timer = 0. # techniquement inutile right now si il se relève jamais
-	laugh(1.)
+	laugh(2.)
 
 func dist(p):
 	return sqrt((p.position.x-position.x)**2 + (p.position.y-position.y)**2)
@@ -38,6 +38,9 @@ func dist(p):
 func dist2(p):
 	# Pas de sqrt, optimisation tu connais
 	return (p.position.x-position.x)**2 + (p.position.y-position.y)**2
+
+func r0_coef(d2):
+	return exp(-2*d2/(SPREAD_RADIUS**2))
 
 
 func rand_move():
@@ -60,7 +63,8 @@ func get_neighbors():
 
 func laugh(rate):
 	for p in get_neighbors():
-		p.triggered(rate)
+		var d2 = dist2(p)
+		p.triggered(rate * r0_coef(d2))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -68,11 +72,11 @@ func _process(delta):
 	if not fallen:
 		if not is_laughing():
 			# Blanc -> magenta
+			modulate = Color(1., min(1.-laughing, 1.), 1.)
 			$Sprite2D.rotation = 0.1 * sin(distance * 2 )
-			# modulate = Color(1., min(1.-laughing, 1.), 1.)
 		else:
 			# Jaune -> noir
-			# modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
+			modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
 			timer += delta
 			$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * laughing * 10)
 			
