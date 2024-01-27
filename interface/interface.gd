@@ -21,7 +21,6 @@ func _ready():
 func _process(_delta):
 	pass
 
-
 func _input(event):
 	var button_index = 0
 	if (event.is_action_released("num0")):
@@ -36,7 +35,6 @@ func _input(event):
 		b.button_pressed = not b.button_pressed
 		button_press(button_index)
 
-
 func release_buttons(except_index):
 	for i in range(1, NB_BUTTONS+1):
 		if i!=except_index:
@@ -44,7 +42,6 @@ func release_buttons(except_index):
 
 func get_buttons_states():
 	return [$Button1.button_pressed, $Button2.button_pressed, $Button3.button_pressed, $Button4.button_pressed]
-
 
 func button_press(button_index):
 	if get_node("Button"+str(button_index)).button_pressed == true:
