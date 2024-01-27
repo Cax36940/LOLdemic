@@ -31,4 +31,3 @@ func get_buttons_states():
 func _on_button_pressed(button_index):
 	print(button_index)
 	release_buttons(button_index)
-	print(get_buttons_states())
