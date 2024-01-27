@@ -69,16 +69,17 @@ func laugh(rate):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	# Affichage en avant des players les plus en bas
+	z_index = position.y 
+	
 	if not fallen:
 		if not is_laughing():
 			# Blanc -> magenta
 			modulate = Color(1., min(1.-laughing, 1.), 1.)
 			$Sprite2D.rotation = 0.1 * sin(distance * 2 )
-<<<<<<< HEAD
 			$CPUParticles2D.visible = false
 			# modulate = Color(1., min(1.-laughing, 1.), 1.)
-=======
->>>>>>> 02d70ae8fd4bbd6b8b7aaa818e2a608b0ae0ff6d
+
 		else:
 			# Jaune -> noir
 			modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
