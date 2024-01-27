@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bolshv6t6cil8"]
+[gd_scene load_steps=8 format=3 uid="uid://bolshv6t6cil8"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_i4hxi"]
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://dkyat4fugv36j" path="res://player.png" id="2_istjn"]
+[ext_resource type="Texture2D" uid="uid://bw6xqbrdnoe5k" path="res://Player/hahah.png" id="3_f0lam"]
+=======
 [ext_resource type="Texture2D" uid="uid://krnfuscmxrq1" path="res://player.png" id="2_istjn"]
+>>>>>>> 02d70ae8fd4bbd6b8b7aaa818e2a608b0ae0ff6d
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh8q"]
 size = Vector2(10.9091, 9.54545)
@@ -9,18 +14,32 @@ size = Vector2(10.9091, 9.54545)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a656c"]
 size = Vector2(20, 31)
 
+[sub_resource type="Curve" id="Curve_s6s5s"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.0786517, -15.3846), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_hcmoq"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.546667, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.953333, 0.953333, 0.953333, 1, 1, 1, 1, 0.00784314)
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2.2, 2.2)
 collision_mask = 2
 script = ExtResource("1_i4hxi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
 position = Vector2(0, -16)
 texture = ExtResource("2_istjn")
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.16744e-07, -9.77273)
 shape = SubResource("RectangleShape2D_koh8q")
+
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -16)
@@ -29,4 +48,21 @@ position = Vector2(0, -16)
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_a656c")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -20)
+amount = 4
+texture = ExtResource("3_f0lam")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+linear_accel_min = 5.0
+linear_accel_max = 5.0
+linear_accel_curve = SubResource("Curve_s6s5s")
+angle_min = -25.0
+angle_max = 25.0
+color_ramp = SubResource("Gradient_hcmoq")
+
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+

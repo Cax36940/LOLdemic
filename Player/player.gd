@@ -74,11 +74,17 @@ func _process(delta):
 			# Blanc -> magenta
 			modulate = Color(1., min(1.-laughing, 1.), 1.)
 			$Sprite2D.rotation = 0.1 * sin(distance * 2 )
+<<<<<<< HEAD
+			$CPUParticles2D.visible = false
+			# modulate = Color(1., min(1.-laughing, 1.), 1.)
+=======
+>>>>>>> 02d70ae8fd4bbd6b8b7aaa818e2a608b0ae0ff6d
 		else:
 			# Jaune -> noir
 			modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
 			timer += delta
-			$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * laughing * 10)
+			$Sprite2D.position.y = SPRITE_POSITION_Y + 4 * sin(timer * minf(laughing, 1.3) * 5)
+			$CPUParticles2D.visible = true
 			
 			laugh((laughing-1) * SPREAD_RATE_COEF)
 			laughing = move_toward(laughing, 2., delta / LAUGH_TIME)

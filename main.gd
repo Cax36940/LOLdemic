@@ -5,6 +5,7 @@ enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, BUTTON4}
 var GOAL = 0
 var interface = null
 var controlled_player = null
+var level = null
 var pause = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,13 +32,13 @@ func pause_unpause():
 func restart():
 	pause_unpause()
 	interface.queue_free()
-	$LevelLoader.get_child(0).queue_free()
-	$LevelLoader.get_child(0).tree_exited.connect(load_game)
+	level.queue_free()
+	level.tree_exited.connect(load_game)
 
 func quit_level():
 	pause_unpause()
 	interface.queue_free()
-	$LevelLoader.get_child(0).queue_free()
+	level.queue_free()
 	add_child(load("res://Menu/menu.tscn").instantiate())
 
 func is_input_control(player):
@@ -59,8 +60,9 @@ func is_input_contaminate():
 
 
 func load_game():
-	$LevelLoader.add_child(load("res://Levels/level_" + level_name + ".tscn").instantiate())
-	$LevelLoader.get_child(0).name = "Level_Base"
+	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
+	$LevelLoader.add_child(level)
+	level.name = "Level_Base"
 	interface = load("res://interface/interface.tscn").instantiate()
 	GOAL = $LevelLoader.get_node("Level_Base").get_meta("GOAL")
 	interface.get_node("Jauge").GOAL = GOAL
