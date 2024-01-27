@@ -337,6 +337,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2ex8s")
 
 [node name="Level_Hospital" type="Node2D"]
+metadata/GOAL = 1
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -348,6 +349,27 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 3, 65536, 131072, 4, 1, 196608, 
 [node name="Player" parent="Background/Decors" instance=ExtResource("2_7xpab")]
 position = Vector2(551, 667)
 laughing = 1.5
+
+[node name="Player2" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(87, 306)
+
+[node name="Player3" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(98, 83)
+
+[node name="Player4" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(274, 83)
+
+[node name="Player5" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(798, 69)
+
+[node name="Player6" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(455, 506)
+
+[node name="Player7" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(934, 665)
+
+[node name="Player8" parent="Background/Decors" instance=ExtResource("2_7xpab")]
+position = Vector2(851, 355)
 
 [node name="Wall" type="TileMap" parent="Background"]
 modulate = Color(1, 0, 0, 0.890196)
