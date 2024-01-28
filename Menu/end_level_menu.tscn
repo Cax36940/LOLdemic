@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Menu/end_level_menu.gd" id="1_nqftn"]
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="2_no75i"]
 
-[node name="Escape" type="Control"]
+[node name="Escape2" type="Control"]
 top_level = true
 z_index = 4096
 z_as_relative = false
@@ -54,6 +54,15 @@ offset_bottom = 588.0
 scale = Vector2(2, 0.5)
 pivot_offset = Vector2(68, 72)
 text = "BACK TO MENU"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 200.0
+offset_right = 290.0
+offset_bottom = 223.0
+text = "0
+"
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
