@@ -1040,7 +1040,7 @@ texture = ExtResource("2_0ov18")
 sources/0 = SubResource("TileSetAtlasSource_53u5g")
 
 [node name="Level_Base" type="Node2D"]
-metadata/GOAL = 0
+metadata/GOAL = 12
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -1067,155 +1067,110 @@ metadata/GOAL = 1
 [node name="Player" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 200
 position = Vector2(183, 200)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player2" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 247
 position = Vector2(186, 247)
+scale = Vector2(1.8, 1.8)
+MAX_SPEED = 80
 PERSON_TYPE = 1
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player2" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player3" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 292
 position = Vector2(184, 292)
+scale = Vector2(1.8, 1.8)
+MAX_SPEED = 80
 PERSON_TYPE = 1
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player3" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player4" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 192
 position = Vector2(427, 192)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player4" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player5" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 306
 position = Vector2(426, 306)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player5" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player6" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 243
 position = Vector2(429, 243)
+scale = Vector2(1.8, 1.8)
+MAX_SPEED = 80
 PERSON_TYPE = 1
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player6" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player7" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 483
 position = Vector2(179, 483)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player7" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player8" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 591
 position = Vector2(182, 591)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player8" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player9" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 487
 position = Vector2(431, 487)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player9" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player10" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 590
 position = Vector2(656, 590)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player10" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player11" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 531
 position = Vector2(654, 531)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+PERSON_TYPE = 2
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player11" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player12" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 481
 position = Vector2(652, 481)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+PERSON_TYPE = 2
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player12" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player13" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 316
 position = Vector2(653, 316)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+PERSON_TYPE = 2
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player13" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player14" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 269
 position = Vector2(652, 269)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player14" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player15" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 228
 position = Vector2(651, 228)
+scale = Vector2(1.8, 1.8)
+MAX_SPEED = 80
 PERSON_TYPE = 1
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player15" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player16" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 190
 position = Vector2(648, 190)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player16" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player17" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 348
 position = Vector2(838, 348)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player17" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player18" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 409
 position = Vector2(840, 409)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
-[node name="Player18" parent="." instance=ExtResource("8_55dbj")]
+[node name="Player19" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 382
 position = Vector2(908, 382)
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+PERSON_TYPE = 2
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
