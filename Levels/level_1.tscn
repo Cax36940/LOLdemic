@@ -357,4 +357,5 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 2, 131072, 196
 [node name="People" type="Node2D" parent="."]
 
 [node name="Player" parent="People" instance=ExtResource("2_073wl")]
+z_index = 465
 position = Vector2(233, 465)
