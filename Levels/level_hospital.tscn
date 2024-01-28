@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_i6ehk"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_7xpab"]
 [ext_resource type="TileSet" uid="uid://ddipdjn5ceq17" path="res://Levels/tileset.tres" id="3_557af"]
-[ext_resource type="Texture2D" uid="uid://cxbus5ys0k2a" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Stuff/objects_house_0036_Layer-37.png" id="4_cu1n4"]
+[ext_resource type="Texture2D" uid="uid://cxbus5ys0k2a" path="res://tiles/PNG/Stuff/objects_house_0036_Layer-37.png" id="4_cu1n4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rl2t4"]
 texture = ExtResource("4_cu1n4")

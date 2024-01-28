@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=3 uid="uid://drhbx2ygi4ckq"]
 
-[ext_resource type="Texture2D" uid="uid://648i737is68x" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Tiles/Ground_Tile_01_B.png" id="1_ejawd"]
-[ext_resource type="Texture2D" uid="uid://c08qkme85x6y6" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Tiles/Ground_Tile_02_C.png" id="1_iybgv"]
+[ext_resource type="Texture2D" uid="uid://648i737is68x" path="res://tiles/PNG/Tiles/Ground_Tile_01_B.png" id="1_ejawd"]
+[ext_resource type="Texture2D" uid="uid://c08qkme85x6y6" path="res://tiles/PNG/Tiles/Ground_Tile_02_C.png" id="1_iybgv"]
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_uvmk1"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_f06ir"]
-[ext_resource type="Texture2D" uid="uid://cpoyb3aaxsbbh" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Decor_Tiles/Decor_Tile_A_05.png" id="2_maovg"]
-[ext_resource type="Texture2D" uid="uid://cwjnwnbykx1yo" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Trees/2.png" id="5_8bipd"]
-[ext_resource type="Texture2D" uid="uid://bumw4bdxtixdl" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Bushes/1.png" id="6_7lb6h"]
-[ext_resource type="Texture2D" uid="uid://wlpm72udxq8i" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Stuff/objects_house_0039_Layer-40.png" id="7_5f3fk"]
+[ext_resource type="Texture2D" uid="uid://cpoyb3aaxsbbh" path="res://tiles/PNG/Decor_Tiles/Decor_Tile_A_05.png" id="2_maovg"]
+[ext_resource type="Texture2D" uid="uid://cwjnwnbykx1yo" path="res://tiles/2 Objects/Trees/2.png" id="5_8bipd"]
+[ext_resource type="Texture2D" uid="uid://bumw4bdxtixdl" path="res://tiles/2 Objects/Bushes/1.png" id="6_7lb6h"]
+[ext_resource type="Texture2D" uid="uid://wlpm72udxq8i" path="res://tiles/PNG/Stuff/objects_house_0039_Layer-40.png" id="7_5f3fk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bvd4o"]
 texture = ExtResource("2_maovg")
@@ -1777,13 +1777,8 @@ texture_region_size = Vector2i(26, 20)
 [sub_resource type="TileSet" id="TileSet_k81tg"]
 sources/0 = SubResource("TileSetAtlasSource_7spc6")
 
-<<<<<<< HEAD
 [node name="Level_Base" type="Node2D"]
 metadata/GOAL = 9
-=======
-[node name="Level_Base3" type="Node2D"]
-metadata/GOAL = 10
->>>>>>> 8361ce5dadb996d24496978ad7be2a774f070922
 
 [node name="Background" type="Node2D" parent="."]
 

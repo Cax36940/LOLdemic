@@ -1,7 +1,18 @@
 @tool
 extends CharacterBody2D
 @export var MAX_SPEED : int = 50
-@export var laughing : float = 0.
+var laughing : float = 0. :
+	set(new_value):
+		laughing = new_value
+		$Sprite/Face/Mouth.frame = ceil(laughing)
+		if laughing > 1 :
+			if $Laugh1.playing == false and $Laugh2.playing == false :
+				var r = randi_range(0,200)
+				if r < 2 :
+					get_node("Laugh"+str(randi_range(1, 2))).playing = true
+			pass
+			
+		
 @export_enum("Normal", "Child", "Senior", "Ghost") var PERSON_TYPE: int = 0
 
 var speed = 1.
