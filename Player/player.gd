@@ -346,7 +346,7 @@ func _ready():
 	is_ready = true
 	rand_move()
 	rand_people = init_people_randomly 
-	
+
 
 func uncontrol():
 	$Sprite/White.visible = false
@@ -367,18 +367,30 @@ func dist2(p):
 	# Pas de sqrt, optimisation tu connais
 	return (p.position.x-position.x)**2 + (p.position.y-position.y)**2
 
+func player_is_visible(p):
+	var raycast = load("res://Player/raycast.tscn").instantiate()
+	add_child(raycast)
+	raycast.add_exception(self)
+	raycast.position = Vector2(0, -10)
+	raycast.target_position = p.position - position
+	raycast.force_raycast_update()
+	var collide = raycast.get_collider() == p
+	raycast.queue_free()
+	return collide
+
 func r0_coef(d2):
 	return exp(-2*d2/(SPREAD_RADIUS**2))
 
 
 func rand_move():
-	dx = randf()*2 - 1
-	dy = randf()*2 - 1
+	dx = 0#randf()*2 - 1
+	dy = 0#randf()*2 - 1
 
 func is_laughing():
 	return laughing >= 1.
 
 func triggered(rate):
+	print(position, "hahaha")
 	if not is_laughing() and not controlled and not fallen:
 		laughing = move_toward(laughing, 2., rate)
 
@@ -386,7 +398,9 @@ func get_neighbors():
 	var neigh = []
 	for p in get_node("..").get_children():
 		if p != self and dist2(p) <= SPREAD_RADIUS**2:
-			neigh.append(p)
+			print(p.position, player_is_visible(p))
+			if player_is_visible(p):
+				neigh.append(p)
 	return neigh
 
 func laugh(rate):

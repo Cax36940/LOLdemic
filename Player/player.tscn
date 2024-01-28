@@ -35,17 +35,20 @@ colors = PackedColorArray(1, 1, 1, 1, 0.953333, 0.953333, 0.953333, 1, 1, 1, 1, 
 scale = Vector2(2.2, 2.2)
 collision_mask = 2
 script = ExtResource("1_i4hxi")
-skin_color = Color(0.9, 0.72, 0.53, 1)
-eyer_frame = 11
-eyel_frame = 11
-neck_frame = 2
-neck_color = Color(0.196078, 0.258824, 0.337255, 1)
-shirt_color = Color(0.862745, 0.901961, 0.988235, 1)
+skin_color = Color(1, 0.87, 0.73, 1)
+eyel_frame = 16
+eyelash_color = 3
+neck_frame = 7
+neck_color = Color(0.416056, 0.416056, 0.416056, 1)
+hair_frame = 1
+hair_color = Color(0.264682, 0.0740461, 0.411146, 1)
+shirt_color = Color(0.276789, 0.10472, 0.473729, 1)
 pants_frame = 1
-export_code = "{\"eyel_frame\":11,\"eyelash_color\":0,\"eyer_frame\":11,\"hair_color_b\":0,\"hair_color_g\":0.176470592617989,\"hair_color_r\":0.282352954149246,\"hair_frame\":0,\"neck_color_b\":0.337254911661148,\"neck_color_g\":0.258823543787003,\"neck_color_r\":0.196078434586525,\"neck_frame\":2,\"pants_color_b\":0.26274511218071,\"pants_color_g\":0.113725490868092,\"pants_color_r\":0.062745101749897,\"pants_frame\":1,\"shirt_color_b\":0.988235294818878,\"shirt_color_g\":0.901960790157318,\"shirt_color_r\":0.862745106220245,\"shirt_frame\":0,\"skin_color_b\":0.529999971389771,\"skin_color_g\":0.720000028610229,\"skin_color_r\":0.899999976158142}"
+pants_color = Color(0.0867925, 0.207062, 0.0468865, 1)
+export_code = "{\"eyel_frame\":16,\"eyelash_color\":3,\"eyer_frame\":0,\"hair_color_b\":0.411145955324173,\"hair_color_g\":0.0740461498498917,\"hair_color_r\":0.264682292938232,\"hair_frame\":1,\"neck_color_b\":0.416055619716644,\"neck_color_g\":0.416055619716644,\"neck_color_r\":0.416055619716644,\"neck_frame\":7,\"pants_color_b\":0.0468864962458611,\"pants_color_g\":0.207062289118767,\"pants_color_r\":0.0867924988269806,\"pants_frame\":1,\"shirt_color_b\":0.473728626966476,\"shirt_color_g\":0.104719698429108,\"shirt_color_r\":0.276789277791977,\"shirt_frame\":0,\"skin_color_b\":0.730000019073486,\"skin_color_g\":0.870000004768372,\"skin_color_r\":1}"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.16744e-07, -9.77273)
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_koh8q")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -59,37 +62,38 @@ shape = SubResource("RectangleShape2D_a656c")
 position = Vector2(0, -21)
 
 [node name="Skin" type="Sprite2D" parent="Sprite"]
-modulate = Color(0.9, 0.72, 0.53, 1)
+modulate = Color(1, 0.87, 0.73, 1)
 position = Vector2(0, 5)
 texture = ExtResource("5_bvmph")
 
 [node name="Hair" type="Sprite2D" parent="Sprite"]
-modulate = Color(0.282353, 0.176471, 0, 1)
+modulate = Color(0.264682, 0.0740461, 0.411146, 1)
 position = Vector2(0, 5)
 texture = ExtResource("6_fhg41")
 hframes = 4
+frame = 1
 
 [node name="Clothes" type="Node2D" parent="Sprite"]
 
 [node name="Pants" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.0627451, 0.113725, 0.262745, 1)
+modulate = Color(0.0867925, 0.207062, 0.0468865, 1)
 position = Vector2(0, 5)
 texture = ExtResource("7_cmtxl")
 hframes = 2
 frame = 1
 
 [node name="Shirt" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.862745, 0.901961, 0.988235, 1)
+modulate = Color(0.276789, 0.10472, 0.473729, 1)
 position = Vector2(0, 5)
 texture = ExtResource("8_sd642")
 hframes = 2
 
 [node name="Neck" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.196078, 0.258824, 0.337255, 1)
+modulate = Color(0.416056, 0.416056, 0.416056, 1)
 position = Vector2(0, 7.5)
 texture = ExtResource("9_6yoak")
 hframes = 10
-frame = 2
+frame = 7
 
 [node name="Shoes" type="Sprite2D" parent="Sprite/Clothes"]
 modulate = Color(0.35, 0.35, 0.35, 1)
@@ -102,23 +106,24 @@ texture = ExtResource("10_xi6p2")
 position = Vector2(-2, -1)
 texture = ExtResource("11_fhppx")
 hframes = 20
-frame = 11
+frame = 16
 
 [node name="EyelashL" type="Sprite2D" parent="Sprite/Face"]
-position = Vector2(-3.5, -2.5)
+position = Vector2(-2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
+frame = 3
 
 [node name="EyeR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(2, -1)
 texture = ExtResource("11_fhppx")
 hframes = 20
-frame = 11
 
 [node name="EyelashR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(3.5, -2.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
+frame = 3
 
 [node name="Mouth" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(0, 2)
@@ -129,12 +134,14 @@ hframes = 3
 position = Vector2(0, 5)
 texture = ExtResource("14_aeecl")
 hframes = 6
+frame = 1
 
 [node name="White" type="Sprite2D" parent="Sprite"]
 visible = false
 position = Vector2(0, 5)
 texture = ExtResource("15_73r0m")
 hframes = 6
+frame = 1
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(0, -20)

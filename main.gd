@@ -7,7 +7,8 @@ var interface = null
 var controlled_player = null
 var level = null
 var pause = false
-var score = 1000.
+const SCORE_INIT = 1000.
+var score = SCORE_INIT
 const SCORE_PER_SEC = -10.
 var num_control = 0
 var num_contaminate = 0
@@ -33,9 +34,12 @@ func _input(event):
 
 func update_score_control():
 	# score loss when the player controls a person
-	score -= 40
+	if num_control == 0:
+		score -= 20
+	else:
+		score -= 50
+		score_has_started = true
 	num_control += 1
-	score_has_started = true
 
 func update_score_contaminate():
 	# score loss when the player contaminates a person
@@ -82,8 +86,10 @@ func quit_level():
 
 func is_input_control(player):
 	# Initiate control
-	if controlled_player != null or interface.state != CONTROL:
+	if interface.state != CONTROL:
 		return false
+	if controlled_player != null:
+		controlled_player.uncontrol()
 	controlled_player = player
 	update_score_control()
 	return true
@@ -104,6 +110,7 @@ func is_input_contaminate():
 
 
 func load_game():
+	score = SCORE_INIT
 	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
 	$LevelLoader.add_child(level)
 	level.name = "Level_Base"
