@@ -536,8 +536,7 @@ export_code = "{\"eyel_frame\":18,\"eyelash_color\":1,\"eyer_frame\":18,\"hair_c
 [node name="Player" parent="People" instance=ExtResource("2_7xpab")]
 z_index = 663
 position = Vector2(102, 663)
+scale = Vector2(1.8, 1.8)
+MAX_SPEED = 80
 PERSON_TYPE = 1
-neck_color = Color(0.427485, 0.427485, 0.427485, 1)
-hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
-shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
-pants_color = Color(0.571794, 0.588483, 0.444564, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
