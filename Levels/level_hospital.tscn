@@ -396,7 +396,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":18,\"eyelash_color\":0,\"eyer_frame\":18,\"hair_color_b\":0,\"hair_color_g\":0.0784313753247261,\"hair_color_r\":0.160784319043159,\"hair_frame\":0,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.749019622802734,\"skin_color_g\":0.847058832645416,\"skin_color_r\":1}"
 
 [node name="Doctor2" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 678
+z_index = 679
 position = Vector2(859, 679)
 init_people_randomly = false
 skin_color = Color(1, 0.847059, 0.74902, 1)
@@ -412,7 +412,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":13,\"eyelash_color\":2,\"eyer_frame\":14,\"hair_color_b\":0.678431391716003,\"hair_color_g\":0.474509805440903,\"hair_color_r\":0.972549021244049,\"hair_frame\":1,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.749019622802734,\"skin_color_g\":0.847058832645416,\"skin_color_r\":1}"
 
 [node name="Doctor3" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 369
+z_index = 370
 position = Vector2(808, 370)
 init_people_randomly = false
 skin_color = Color(0.72, 0.48, 0.33, 1)
@@ -443,7 +443,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":9,\"eyelash_color\":2,\"eyer_frame\":11,\"hair_color_b\":0.368334591388702,\"hair_color_g\":0.363580763339996,\"hair_color_r\":0.387424260377884,\"hair_frame\":2,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.560000002384186,\"skin_color_g\":0.759999990463257,\"skin_color_r\":0.949999988079071}"
 
 [node name="Doctor5" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 212
+z_index = 213
 position = Vector2(542, 213)
 init_people_randomly = false
 skin_color = Color(1, 0.847059, 0.74902, 1)
@@ -458,7 +458,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":15,\"eyelash_color\":3,\"eyer_frame\":10,\"hair_color_b\":0,\"hair_color_g\":0.0784313753247261,\"hair_color_r\":0.160784319043159,\"hair_frame\":2,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.749019622802734,\"skin_color_g\":0.847058832645416,\"skin_color_r\":1}"
 
 [node name="Doctor6" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 666
+z_index = 667
 position = Vector2(216, 667)
 init_people_randomly = false
 skin_color = Color(0.8, 0.6, 0.4, 1)
@@ -490,7 +490,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":5,\"eyelash_color\":0,\"eyer_frame\":5,\"hair_color_b\":0.750080943107605,\"hair_color_g\":0.209076836705208,\"hair_color_r\":0.666565954685211,\"hair_frame\":0,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.749019622802734,\"skin_color_g\":0.847058832645416,\"skin_color_r\":1}"
 
 [node name="Doctor8" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 307
+z_index = 308
 position = Vector2(179, 308)
 init_people_randomly = false
 skin_color = Color(0.47, 0.24, 0, 1)
@@ -504,7 +504,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":18,\"eyelash_color\":1,\"eyer_frame\":19,\"hair_color_b\":0,\"hair_color_g\":0.0784313753247261,\"hair_color_r\":0.160784319043159,\"hair_frame\":2,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.239999994635582,\"skin_color_r\":0.469999998807907}"
 
 [node name="Doctor9" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 468
+z_index = 469
 position = Vector2(546, 469)
 init_people_randomly = false
 skin_color = Color(0.95, 0.76, 0.56, 1)
@@ -520,7 +520,7 @@ pants_color = Color(0.611765, 0.611765, 0.611765, 1)
 export_code = "{\"eyel_frame\":9,\"eyelash_color\":0,\"eyer_frame\":9,\"hair_color_b\":0.735979616641998,\"hair_color_g\":0.430912017822266,\"hair_color_r\":0.493982821702957,\"hair_frame\":0,\"mouth_frame\":0,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":7,\"pants_color_b\":0.61176472902298,\"pants_color_g\":0.61176472902298,\"pants_color_r\":0.61176472902298,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":0,\"skin_color_b\":0.560000002384186,\"skin_color_g\":0.759999990463257,\"skin_color_r\":0.949999988079071}"
 
 [node name="Doctor10" parent="People" instance=ExtResource("2_7xpab")]
-z_index = 668
+z_index = 669
 position = Vector2(441, 669)
 init_people_randomly = false
 skin_color = Color(0.4, 0.2, 0, 1)

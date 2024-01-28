@@ -379,7 +379,7 @@ sources/5 = SubResource("TileSetAtlasSource_2nhtn")
 sources/0 = SubResource("TileSetAtlasSource_7ybgm")
 
 [node name="Level_Base2" type="Node2D"]
-metadata/GOAL = 10
+metadata/GOAL = 7
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -601,3 +601,8 @@ hair_color = Color(0.499233, 0.00632751, 0.16534, 1)
 shirt_color = Color(0.495464, 0.242766, 0.546771, 1)
 pants_color = Color(0.571794, 0.588483, 0.444564, 1)
 export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340229868889,\"hair_color_g\":0.00632750662043691,\"hair_color_r\":0.499233186244965,\"hair_frame\":2,\"mouth_frame\":0,\"neck_color_b\":0.427485287189484,\"neck_color_g\":0.427485287189484,\"neck_color_r\":0.427485287189484,\"neck_frame\":5,\"pants_color_b\":0.444564402103424,\"pants_color_g\":0.588483154773712,\"pants_color_r\":0.571793675422668,\"pants_frame\":1,\"shirt_color_b\":0.546770751476288,\"shirt_color_g\":0.242765799164772,\"shirt_color_r\":0.49546417593956,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+
+[node name="Teacher" parent="People" instance=ExtResource("2_10x3s")]
+z_index = 126
+position = Vector2(978, 126)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"

@@ -3,6 +3,7 @@ extends Control
 enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, GHOST}
 var state = NO_BUTTON
 const NB_BUTTONS = 4
+var level_finished = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +20,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if $Timer/TimerBar.value >= 1 and not level_finished:
+		get_node("/root/World").end_level_menu()
+		level_finished = true
 	$Score.text = str(int(get_node("/root/World").score))
 
 func _input(event):
