@@ -345,8 +345,8 @@ func update_line():
 func _ready():
 	is_ready = true
 	rand_move()
-	rand_people = init_people_randomly 
-
+	rand_people = init_people_randomly and not Engine.is_editor_hint()
+	
 
 func uncontrol():
 	$Sprite/White.visible = false
@@ -383,8 +383,8 @@ func r0_coef(d2):
 
 
 func rand_move():
-	dx = 0#randf()*2 - 1
-	dy = 0#randf()*2 - 1
+	dx = randf()*2 - 1
+	dy = randf()*2 - 1
 
 func is_laughing():
 	return laughing >= 1.

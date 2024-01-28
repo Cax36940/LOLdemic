@@ -35,17 +35,18 @@ colors = PackedColorArray(1, 1, 1, 1, 0.953333, 0.953333, 0.953333, 1, 1, 1, 1, 
 scale = Vector2(2.2, 2.2)
 collision_mask = 2
 script = ExtResource("1_i4hxi")
-skin_color = Color(1, 0.87, 0.73, 1)
+skin_color = Color(0.4, 0.2, 0, 1)
+eyer_frame = 17
 eyel_frame = 16
-eyelash_color = 3
-neck_frame = 7
-neck_color = Color(0.416056, 0.416056, 0.416056, 1)
-hair_frame = 1
-hair_color = Color(0.264682, 0.0740461, 0.411146, 1)
-shirt_color = Color(0.276789, 0.10472, 0.473729, 1)
+eyelash_color = 1
+neck_frame = 5
+neck_color = Color(0.38626, 0.38626, 0.38626, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_color = Color(0.516435, 0.20815, 0.31094, 1)
 pants_frame = 1
-pants_color = Color(0.0867925, 0.207062, 0.0468865, 1)
-export_code = "{\"eyel_frame\":16,\"eyelash_color\":3,\"eyer_frame\":0,\"hair_color_b\":0.411145955324173,\"hair_color_g\":0.0740461498498917,\"hair_color_r\":0.264682292938232,\"hair_frame\":1,\"neck_color_b\":0.416055619716644,\"neck_color_g\":0.416055619716644,\"neck_color_r\":0.416055619716644,\"neck_frame\":7,\"pants_color_b\":0.0468864962458611,\"pants_color_g\":0.207062289118767,\"pants_color_r\":0.0867924988269806,\"pants_frame\":1,\"shirt_color_b\":0.473728626966476,\"shirt_color_g\":0.104719698429108,\"shirt_color_r\":0.276789277791977,\"shirt_frame\":0,\"skin_color_b\":0.730000019073486,\"skin_color_g\":0.870000004768372,\"skin_color_r\":1}"
+pants_color = Color(0.821548, 0.777509, 0.263241, 1)
+export_code = "{\"eyel_frame\":0,\"eyelash_color\":1,\"eyer_frame\":17,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.386260002851486,\"neck_color_g\":0.386260002851486,\"neck_color_r\":0.386260002851486,\"neck_frame\":5,\"pants_color_b\":0.263240844011307,\"pants_color_g\":0.777508735656738,\"pants_color_r\":0.82154792547226,\"pants_frame\":1,\"shirt_color_b\":0.31094029545784,\"shirt_color_g\":0.208150163292885,\"shirt_color_r\":0.516435205936432,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.200000002980232,\"skin_color_r\":0.400000005960464}"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
@@ -67,33 +68,32 @@ position = Vector2(0, 5)
 texture = ExtResource("5_bvmph")
 
 [node name="Hair" type="Sprite2D" parent="Sprite"]
-modulate = Color(0.264682, 0.0740461, 0.411146, 1)
 position = Vector2(0, 5)
 texture = ExtResource("6_fhg41")
 hframes = 4
-frame = 1
+frame = 3
 
 [node name="Clothes" type="Node2D" parent="Sprite"]
 
 [node name="Pants" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.0867925, 0.207062, 0.0468865, 1)
+modulate = Color(0.821548, 0.777509, 0.263241, 1)
 position = Vector2(0, 5)
 texture = ExtResource("7_cmtxl")
 hframes = 2
 frame = 1
 
 [node name="Shirt" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.276789, 0.10472, 0.473729, 1)
+modulate = Color(0.516435, 0.20815, 0.31094, 1)
 position = Vector2(0, 5)
 texture = ExtResource("8_sd642")
 hframes = 2
 
 [node name="Neck" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.416056, 0.416056, 0.416056, 1)
+modulate = Color(0.38626, 0.38626, 0.38626, 1)
 position = Vector2(0, 7.5)
 texture = ExtResource("9_6yoak")
 hframes = 10
-frame = 7
+frame = 5
 
 [node name="Shoes" type="Sprite2D" parent="Sprite/Clothes"]
 modulate = Color(0.35, 0.35, 0.35, 1)
@@ -106,24 +106,24 @@ texture = ExtResource("10_xi6p2")
 position = Vector2(-2, -1)
 texture = ExtResource("11_fhppx")
 hframes = 20
-frame = 16
 
 [node name="EyelashL" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(-2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
-frame = 3
+frame = 1
 
 [node name="EyeR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(2, -1)
 texture = ExtResource("11_fhppx")
 hframes = 20
+frame = 17
 
 [node name="EyelashR" type="Sprite2D" parent="Sprite/Face"]
-position = Vector2(3.5, -2.5)
+position = Vector2(2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
-frame = 3
+frame = 1
 
 [node name="Mouth" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(0, 2)
