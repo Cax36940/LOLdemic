@@ -33,6 +33,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0.953333, 0.953333, 0.953333, 1, 1, 1, 1, 
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2.2, 2.2)
+collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_i4hxi")
 skin_color = Color(0.6, 0.3, 0, 1)
@@ -94,7 +95,7 @@ modulate = Color(0.427485, 0.427485, 0.427485, 1)
 position = Vector2(0, 7.5)
 texture = ExtResource("9_6yoak")
 hframes = 10
-frame = 5
+frame = 2
 
 [node name="Shoes" type="Sprite2D" parent="Sprite/Clothes"]
 modulate = Color(0.35, 0.35, 0.35, 1)
@@ -113,7 +114,6 @@ frame = 3
 position = Vector2(-2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
-frame = 1
 
 [node name="EyeR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(2, -1)
@@ -125,7 +125,6 @@ frame = 3
 position = Vector2(2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
-frame = 1
 
 [node name="Mouth" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(0, 2)

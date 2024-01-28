@@ -24,13 +24,137 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -103.5
-offset_top = -71.5
-offset_right = -53.5
-offset_bottom = -40.5
+offset_left = 349.5
+offset_top = -180.5
+offset_right = 399.5
+offset_bottom = -149.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 text = "Play"
 
-[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[node name="ButtonLevel0" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.5
+offset_top = -300.5
+offset_right = -460.5
+offset_bottom = -260.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "0
+"
+
+[node name="ButtonLevel1" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -300.5
+offset_right = -260.5
+offset_bottom = -260.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "1"
+
+[node name="ButtonLevel2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -300.5
+offset_right = -60.5
+offset_bottom = -260.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "2
+"
+
+[node name="ButtonLevel3" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.5
+offset_top = -100.5
+offset_right = -460.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "3
+"
+
+[node name="ButtonLevel4" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -100.5
+offset_right = -260.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "4
+"
+
+[node name="ButtonLevel5" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -100.5
+offset_right = -60.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "5
+"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 349.5
+offset_top = 199.5
+offset_right = 399.5
+offset_bottom = 230.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "Quit"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="ColorRect/ButtonLevel0" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="ColorRect/ButtonLevel1" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="pressed" from="ColorRect/ButtonLevel2" to="." method="_on_button_pressed" binds= [2]]
+[connection signal="pressed" from="ColorRect/ButtonLevel3" to="." method="_on_button_pressed" binds= [3]]
+[connection signal="pressed" from="ColorRect/ButtonLevel4" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="ColorRect/ButtonLevel5" to="." method="_on_button_pressed" binds= [5]]
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_quit_button_pressed"]
