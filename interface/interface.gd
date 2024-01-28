@@ -26,6 +26,7 @@ func _input(event):
 	if (event.is_action_released("num0")):
 		if state != NO_BUTTON:
 			button_index = state
+			
 	for i in range(1, NB_BUTTONS+1):
 		if (event.is_action_released("num"+str(i))):
 			button_index = i
@@ -36,6 +37,7 @@ func _input(event):
 		button_press(button_index)
 
 func release_buttons(except_index):
+
 	for i in range(1, NB_BUTTONS+1):
 		if i!=except_index:
 			get_node("Button"+str(i)).button_pressed = false
@@ -46,8 +48,14 @@ func get_buttons_states():
 func button_press(button_index):
 	if get_node("Button"+str(button_index)).button_pressed == true:
 		state = button_index
+		$White.visible = true
+		$White.position.y = 95 * state -7 
 	else:
 		state = NO_BUTTON
+		$White.visible = false
+
+
+	
 	release_buttons(button_index)
 
 
