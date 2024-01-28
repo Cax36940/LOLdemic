@@ -160,8 +160,12 @@ func uncontrol():
 func is_input_contaminate():
 	# Initiate contamination
 	if interface.state == CONTAMINATE:
-		update_score_contaminate()
-		return true
+		interface.release_buttons(0)
+		if num_contaminate==0:
+			update_score_contaminate()
+			return true
+		else:
+			return false
 	else:
 		return false
 

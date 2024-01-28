@@ -38,10 +38,12 @@ func _input(event):
 	if button_index:
 		var b = get_node("Button"+str(button_index))
 		b.button_pressed = not b.button_pressed
+		$White.visible = b.button_pressed
+		$White.position.y = 95 * state -7
 		button_press(button_index)
 
 func release_buttons(except_index):
-
+	if except_index==0: $White.visible = false
 	for i in range(1, NB_BUTTONS+1):
 		if i!=except_index:
 			get_node("Button"+str(i)).button_pressed = false
