@@ -1126,18 +1126,21 @@ export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_col
 [node name="Player11" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 531
 position = Vector2(654, 531)
+MAX_SPEED = 30
 PERSON_TYPE = 2
 export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
 [node name="Player12" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 481
 position = Vector2(652, 481)
+MAX_SPEED = 30
 PERSON_TYPE = 2
 export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
 [node name="Player13" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 316
 position = Vector2(653, 316)
+MAX_SPEED = 30
 PERSON_TYPE = 2
 export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
@@ -1162,15 +1165,42 @@ export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_col
 [node name="Player17" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 348
 position = Vector2(838, 348)
-export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+init_people_randomly = false
+skin_color = Color(0.639216, 0.321569, 0, 1)
+eyer_frame = 5
+eyel_frame = 5
+eyelash_color = 0
+neck_color = Color(0.427451, 0.427451, 0.427451, 1)
+shirt_frame = 1
+shirt_color = Color(1, 1, 1, 1)
+export_code = "{\"eyel_frame\":5,\"eyelash_color\":0,\"eyer_frame\":5,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.427450984716415,\"neck_color_g\":0.427450984716415,\"neck_color_r\":0.427450984716415,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"shirt_frame\":1,\"skin_color_b\":0,\"skin_color_g\":0.321568638086319,\"skin_color_r\":0.639215707778931}"
 
 [node name="Player18" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 409
 position = Vector2(840, 409)
-export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+init_people_randomly = false
+skin_color = Color(0.811765, 0.533333, 0.34902, 1)
+eyer_frame = 5
+eyel_frame = 5
+eyelash_color = 0
+neck_color = Color(1, 1, 1, 1)
+hair_frame = 1
+shirt_color = Color(0.145098, 0.0509804, 0.164706, 1)
+pants_color = Color(0.0196078, 0.0235294, 0.0117647, 1)
+export_code = "{\"eyel_frame\":5,\"eyelash_color\":0,\"eyer_frame\":5,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":1,\"neck_color_b\":1,\"neck_color_g\":1,\"neck_color_r\":1,\"neck_frame\":5,\"pants_color_b\":0.0117647061124444,\"pants_color_g\":0.0235294122248888,\"pants_color_r\":0.0196078438311815,\"pants_frame\":1,\"shirt_color_b\":0.164705887436867,\"shirt_color_g\":0.0509803928434849,\"shirt_color_r\":0.14509804546833,\"skin_color_b\":0.34901961684227,\"skin_color_g\":0.533333361148834,\"skin_color_r\":0.811764717102051}"
 
 [node name="Player19" parent="People" instance=ExtResource("8_55dbj")]
 z_index = 382
 position = Vector2(908, 382)
+MAX_SPEED = 30
 PERSON_TYPE = 2
-export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.165340006351471,\"hair_color_g\":0.00632750988006592,\"hair_color_r\":0.49923300743103,\"hair_frame\":2,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":5,\"pants_color_b\":0.444564014673233,\"pants_color_g\":0.588482975959778,\"pants_color_r\":0.571793973445892,\"pants_frame\":1,\"shirt_color_b\":0.546770989894867,\"shirt_color_g\":0.242765992879868,\"shirt_color_r\":0.495463997125626,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+init_people_randomly = false
+skin_color = Color(1, 0.717647, 0.52549, 1)
+eyer_frame = 10
+eyel_frame = 5
+neck_frame = 8
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_color = Color(1, 1, 1, 1)
+pants_color = Color(1, 1, 1, 1)
+export_code = "{\"eyel_frame\":5,\"eyelash_color\":1,\"eyer_frame\":10,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.42748498916626,\"neck_color_g\":0.42748498916626,\"neck_color_r\":0.42748498916626,\"neck_frame\":8,\"pants_color_b\":1,\"pants_color_g\":1,\"pants_color_r\":1,\"pants_frame\":1,\"shirt_color_b\":1,\"shirt_color_g\":1,\"shirt_color_r\":1,\"skin_color_b\":0.52549022436142,\"skin_color_g\":0.717647075653076,\"skin_color_r\":1}"
