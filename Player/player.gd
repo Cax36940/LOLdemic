@@ -345,7 +345,7 @@ func update_line():
 func _ready():
 	is_ready = true
 	rand_move()
-	rand_people = init_people_randomly 
+	rand_people = init_people_randomly and not Engine.is_editor_hint()
 	
 
 func uncontrol():
