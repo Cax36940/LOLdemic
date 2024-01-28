@@ -12,6 +12,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $"../Jauge".is_in_interval():
-		$ProgressBar.value += delta / TOTAL_TIME
+		$TimerBar.value += delta / TOTAL_TIME
 	else:
-		$ProgressBar.value -= delta / DECREASE_RATE
+		$TimerBar.value -= delta / DECREASE_RATE
