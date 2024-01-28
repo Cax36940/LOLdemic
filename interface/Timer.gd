@@ -1,6 +1,6 @@
 extends Node2D
 
-const TOTAL_TIME = 15.
+const TOTAL_TIME = 5.
 const DECREASE_RATE = TOTAL_TIME / 2 # decrease 2x faster
 
 
