@@ -1,12 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ce54v5i74rsoe"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_21fj5"]
-
-[ext_resource type="Texture2D" uid="uid://bm83bgbnnq4dl" path="res://Menu/title.png" id="2_6w77j"]
-[ext_resource type="Theme" uid="uid://1x8ipntv6a85" path="res://Menu/menu_ui.tres" id="2_o7235"]
-[ext_resource type="Theme" uid="uid://c23o68avpdwlm" path="res://Menu/menu_ui_level.tres" id="3_dfvgt"]
-
-
+[ext_resource type="Texture2D" uid="uid://c0yceejmo6ywh" path="res://Menu/title.png" id="2_6w77j"]
+[ext_resource type="Theme" uid="uid://febop71prism" path="res://Menu/menu_ui.tres" id="2_o7235"]
+[ext_resource type="Theme" uid="uid://blt5adgn6n6tm" path="res://Menu/menu_ui_level.tres" id="3_dfvgt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -115,9 +112,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -261.0
-offset_top = -181.0
+offset_top = -182.0
 offset_right = -111.0
-offset_bottom = -31.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_dfvgt")
@@ -130,9 +127,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -44.0
-offset_top = -184.0
+offset_top = -182.0
 offset_right = 106.0
-offset_bottom = -34.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_dfvgt")
@@ -145,10 +142,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -486.0
-offset_top = 65.0
-offset_right = -336.0
-offset_bottom = 215.0
+offset_left = -375.0
+offset_top = 60.0
+offset_right = -225.0
+offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_dfvgt")
@@ -161,30 +158,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -265.0
-offset_top = 63.0
-offset_right = -115.0
-offset_bottom = 213.0
+offset_left = -151.0
+offset_top = 60.0
+offset_right = -1.0
+offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_dfvgt")
 text = "4
-"
-
-[node name="ButtonLevel5" type="Button" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = 61.0
-offset_right = 107.0
-offset_bottom = 211.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_dfvgt")
-text = "5
 "
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed" binds= [0]]
@@ -194,4 +175,3 @@ text = "5
 [connection signal="pressed" from="CanvasLayer/ButtonLevel2" to="." method="_on_button_pressed" binds= [2]]
 [connection signal="pressed" from="CanvasLayer/ButtonLevel3" to="." method="_on_button_pressed" binds= [3]]
 [connection signal="pressed" from="CanvasLayer/ButtonLevel4" to="." method="_on_button_pressed" binds= [4]]
-[connection signal="pressed" from="CanvasLayer/ButtonLevel5" to="." method="_on_button_pressed" binds= [5]]
