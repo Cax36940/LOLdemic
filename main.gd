@@ -7,7 +7,7 @@ var GOAL = 0
 var interface = null
 var controlled_player = null
 var level = null
-var pause = false
+var paused = false
 const SCORE_INIT = 1000.
 var score = SCORE_INIT
 const SCORE_PER_SEC = -10.
@@ -27,23 +27,13 @@ func _process(delta):
 	if score_has_started:
 		score += delta * SCORE_PER_SEC
 
-func next_level():
-	interface.queue_free()
-	level.queue_free()
-	var level_changed = false
-	for i in range(len(LEVEL_LIST)-1):
-		if level_name == LEVEL_LIST[i]:
-			level_name = LEVEL_LIST[i+1]
-			level_changed = true
-			break
-	if level_changed:
-		load_game()
-	else:
-		add_child(load("res://Menu/menu.tscn").instantiate())
-
 func _input(event):
 	if event.is_action_released("escape"):
-		pause_unpause()
+		if not paused:
+			pause()
+		else:
+			unpause()
+			get_node("Escape").queue_free()
 	if event is InputEventMouseButton and event.pressed and interface != null and event.position.x < 1200:
 		if interface.state == BANANA:
 			place_banana(event.position)
@@ -96,25 +86,46 @@ func place_ghost(pos):
 	interface.button_press(GHOST)
 	update_score_ghost()
 
-func pause_unpause():
-	pause = not pause
-	$LevelLoader.get_tree().paused = pause
-	interface.get_tree().paused = pause
-	if pause:
-		add_child(load("res://Menu/escape.tscn").instantiate())
+func end_level_menu():
+	var end_level_menu = load("res://Menu/end_level_menu.tscn").instantiate()
+	add_child(end_level_menu)
+	end_level_menu.get_node("Label").text = str(int(score))
+
+func next_level():
+	interface.free()
+	level.free()
+	var level_changed = false
+	for i in range(len(LEVEL_LIST)-1):
+		if level_name == LEVEL_LIST[i]:
+			level_name = LEVEL_LIST[i+1]
+			level_changed = true
+			break
+	if level_changed:
+		load_game()
 	else:
-		get_node("Escape").queue_free()
+		add_child(load("res://Menu/menu.tscn").instantiate())
+
+func pause():
+	paused = true
+	$LevelLoader.get_tree().paused = paused
+	interface.get_tree().paused = paused
+	add_child(load("res://Menu/escape.tscn").instantiate())
+
+func unpause():
+	paused = false
+	$LevelLoader.get_tree().paused = paused
+	interface.get_tree().paused = paused
 
 func restart():
-	pause_unpause()
-	interface.queue_free()
-	level.queue_free()
-	level.tree_exited.connect(load_game)
+	unpause()
+	interface.free()
+	level.free()
+	load_game()
 
 func quit_level():
-	pause_unpause()
-	interface.queue_free()
-	level.queue_free()
+	unpause()
+	interface.free()
+	level.free()
 	add_child(load("res://Menu/menu.tscn").instantiate())
 
 func is_input_control(player):
@@ -143,8 +154,13 @@ func is_input_contaminate():
 
 
 func load_game():
+	num_control = 0
+	num_contaminate = 0
+	num_banana = 0
+	num_ghost = 0
 	score = SCORE_INIT
-	print(level_name)
+	score_has_started = false
+	paused = false
 	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
 	$LevelLoader.add_child(level)
 	level.name = "Level_Base"

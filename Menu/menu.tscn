@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce54v5i74rsoe"]
+[gd_scene load_steps=5 format=3 uid="uid://ce54v5i74rsoe"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_21fj5"]
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://dj0g25l8l5vhs" path="res://Menu/title.png" id="2_6w77j"]
 [ext_resource type="Theme" uid="uid://febop71prism" path="res://Menu/menu_ui.tres" id="2_o7235"]
 [ext_resource type="Theme" uid="uid://blt5adgn6n6tm" path="res://Menu/menu_ui_level.tres" id="3_dfvgt"]
+=======
+[ext_resource type="Theme" uid="uid://1x8ipntv6a85" path="res://Menu/menu_ui.tres" id="2_o7235"]
+[ext_resource type="Theme" uid="uid://c23o68avpdwlm" path="res://Menu/menu_ui_level.tres" id="3_dfvgt"]
+>>>>>>> ad84fce0cccd8d99a3a863a7f671d32258d047a0
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -51,6 +57,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(1, 1, 0.215686, 1)
+
+[node name="Title" type="Sprite2D" parent="CanvasLayer/ColorRect2"]
+position = Vector2(410, 89)
+texture = ExtResource("2_6w77j")
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
@@ -121,10 +131,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = -187.0
-offset_right = 107.0
-offset_bottom = -37.0
+offset_left = -44.0
+offset_top = -184.0
+offset_right = 106.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_dfvgt")
