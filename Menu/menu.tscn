@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce54v5i74rsoe"]
+[gd_scene load_steps=4 format=3 uid="uid://ce54v5i74rsoe"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_21fj5"]
+[ext_resource type="Theme" uid="uid://febop71prism" path="res://Menu/menu_ui.tres" id="2_o7235"]
+[ext_resource type="Theme" uid="uid://blt5adgn6n6tm" path="res://Menu/menu_ui_level.tres" id="3_dfvgt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,150 +13,175 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_21fj5")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1301.0
-offset_bottom = 801.0
-color = Color(0.980392, 1, 0.513726, 1)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1299.0
+offset_bottom = 800.0
+color = Color(0.0431373, 0.94902, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -601.0
+offset_top = -358.0
+offset_right = 233.0
+offset_bottom = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(1, 0.776471, 0.0666667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/ColorRect2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 349.5
-offset_top = -180.5
-offset_right = 399.5
-offset_bottom = -149.5
+offset_left = -407.0
+offset_top = -348.5
+offset_right = 403.0
+offset_bottom = 342.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+size_flags_horizontal = 4
+color = Color(1, 1, 0.215686, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 357.0
+offset_top = -159.0
+offset_right = 543.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_o7235")
 text = "Play"
 
-[node name="ButtonLevel0" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="Button2" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.5
-offset_top = -300.5
-offset_right = -460.5
-offset_bottom = -260.5
+offset_left = 357.0
+offset_top = 79.0
+offset_right = 549.0
+offset_bottom = 191.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("2_o7235")
+text = "Quit"
+
+[node name="ButtonLevel0" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -182.0
+offset_right = -336.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_dfvgt")
 text = "0
 "
 
-[node name="ButtonLevel1" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="ButtonLevel1" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.5
-offset_top = -300.5
-offset_right = -260.5
-offset_bottom = -260.5
+offset_left = -261.0
+offset_top = -181.0
+offset_right = -111.0
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("3_dfvgt")
 text = "1"
 
-[node name="ButtonLevel2" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="ButtonLevel2" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.5
-offset_top = -300.5
-offset_right = -60.5
-offset_bottom = -260.5
+offset_left = -43.0
+offset_top = -187.0
+offset_right = 107.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("3_dfvgt")
 text = "2
 "
 
-[node name="ButtonLevel3" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="ButtonLevel3" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.5
-offset_top = -100.5
-offset_right = -460.5
-offset_bottom = -60.5
+offset_left = -486.0
+offset_top = 65.0
+offset_right = -336.0
+offset_bottom = 215.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("3_dfvgt")
 text = "3
 "
 
-[node name="ButtonLevel4" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="ButtonLevel4" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.5
-offset_top = -100.5
-offset_right = -260.5
-offset_bottom = -60.5
+offset_left = -265.0
+offset_top = 63.0
+offset_right = -115.0
+offset_bottom = 213.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("3_dfvgt")
 text = "4
 "
 
-[node name="ButtonLevel5" type="Button" parent="ColorRect"]
-layout_mode = 1
+[node name="ButtonLevel5" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.5
-offset_top = -100.5
-offset_right = -60.5
-offset_bottom = -60.5
+offset_left = -43.0
+offset_top = 61.0
+offset_right = 107.0
+offset_bottom = 211.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+theme = ExtResource("3_dfvgt")
 text = "5
 "
 
-[node name="Button2" type="Button" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 349.5
-offset_top = 199.5
-offset_right = 399.5
-offset_bottom = 230.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-text = "Quit"
-
-[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed" binds= [0]]
-[connection signal="pressed" from="ColorRect/ButtonLevel0" to="." method="_on_button_pressed" binds= [0]]
-[connection signal="pressed" from="ColorRect/ButtonLevel1" to="." method="_on_button_pressed" binds= [1]]
-[connection signal="pressed" from="ColorRect/ButtonLevel2" to="." method="_on_button_pressed" binds= [2]]
-[connection signal="pressed" from="ColorRect/ButtonLevel3" to="." method="_on_button_pressed" binds= [3]]
-[connection signal="pressed" from="ColorRect/ButtonLevel4" to="." method="_on_button_pressed" binds= [4]]
-[connection signal="pressed" from="ColorRect/ButtonLevel5" to="." method="_on_button_pressed" binds= [5]]
-[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel0" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel1" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel2" to="." method="_on_button_pressed" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel3" to="." method="_on_button_pressed" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel4" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="CanvasLayer/ButtonLevel5" to="." method="_on_button_pressed" binds= [5]]
