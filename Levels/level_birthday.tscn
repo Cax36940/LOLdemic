@@ -1777,8 +1777,13 @@ texture_region_size = Vector2i(26, 20)
 [sub_resource type="TileSet" id="TileSet_k81tg"]
 sources/0 = SubResource("TileSetAtlasSource_7spc6")
 
+<<<<<<< HEAD
 [node name="Level_Base" type="Node2D"]
 metadata/GOAL = 9
+=======
+[node name="Level_Base3" type="Node2D"]
+metadata/GOAL = 10
+>>>>>>> 8361ce5dadb996d24496978ad7be2a774f070922
 
 [node name="Background" type="Node2D" parent="."]
 

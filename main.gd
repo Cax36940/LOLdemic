@@ -20,12 +20,32 @@ var score_has_started = false # true when the player makes his first action
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_child(load("res://Menu/menu.tscn").instantiate())
+	$Menu_music.playing = true
+	$Game_music.playing = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if score_has_started:
 		score += delta * SCORE_PER_SEC
+
+
+func next_level():
+	interface.queue_free()
+	level.queue_free()
+	var level_changed = false
+	for i in range(len(LEVEL_LIST)-1):
+		if level_name == LEVEL_LIST[i]:
+			level_name = LEVEL_LIST[i+1]
+			level_changed = true
+			break
+	if level_changed:
+		load_game()
+	else:
+		add_child(load("res://Menu/menu.tscn").instantiate())
+		$Menu_music.playing = true
+		$Game_music.playing = false
+
 
 func _input(event):
 	if event.is_action_released("escape"):
@@ -91,19 +111,7 @@ func end_level_menu():
 	add_child(end_level_menu)
 	end_level_menu.get_node("Label").text = str(int(score))
 
-func next_level():
-	interface.free()
-	level.free()
-	var level_changed = false
-	for i in range(len(LEVEL_LIST)-1):
-		if level_name == LEVEL_LIST[i]:
-			level_name = LEVEL_LIST[i+1]
-			level_changed = true
-			break
-	if level_changed:
-		load_game()
-	else:
-		add_child(load("res://Menu/menu.tscn").instantiate())
+
 
 func pause():
 	paused = true
@@ -127,6 +135,8 @@ func quit_level():
 	interface.free()
 	level.free()
 	add_child(load("res://Menu/menu.tscn").instantiate())
+	$Menu_music.playing = true
+	$Game_music.playing = false
 
 func is_input_control(player):
 	# Initiate control
@@ -158,10 +168,11 @@ func load_game():
 	num_contaminate = 0
 	num_banana = 0
 	num_ghost = 0
+
 	score = SCORE_INIT
 	score_has_started = false
-	paused = false
 	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
+
 	$LevelLoader.add_child(level)
 	level.name = "Level_Base"
 	level.get_node("Background").scale = Vector2(1.11, 1.11)
@@ -169,3 +180,6 @@ func load_game():
 	GOAL = $LevelLoader.get_node("Level_Base").get_meta("GOAL")
 	interface.get_node("Jauge").GOAL = GOAL
 	add_child(interface)
+	unpause()
+	if not $Game_music.playing:
+		$Game_music.playing = true

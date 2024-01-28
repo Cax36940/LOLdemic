@@ -20,7 +20,9 @@ func _on_resume_button_pressed():
 
 func _on_restart_button_pressed():
 	get_node("/root/World").restart()
+	queue_free()
 
 
 func _on_quit_button_pressed():
 	get_node("/root/World").quit_level()
+	queue_free()
