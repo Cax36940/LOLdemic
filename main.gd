@@ -109,7 +109,7 @@ func place_ghost(pos):
 func end_level_menu():
 	var end_level_menu = load("res://Menu/end_level_menu.tscn").instantiate()
 	add_child(end_level_menu)
-	end_level_menu.get_node("Label").text = str(int(score))
+	end_level_menu.get_node("CanvasLayer/Label").text = str(int(score))
 
 
 
