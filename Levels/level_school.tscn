@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_jt787"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_10x3s"]
 [ext_resource type="TileSet" uid="uid://ddipdjn5ceq17" path="res://Levels/tileset.tres" id="3_8ejid"]
-[ext_resource type="Texture2D" uid="uid://b3tob1btr3x66" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Props/Ball.png" id="4_5nx23"]
-[ext_resource type="Texture2D" uid="uid://bf7sgfw1rml6t" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Rocks/5.png" id="4_ncuv5"]
-[ext_resource type="Texture2D" uid="uid://bq3x1a6wpf1mw" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Buildings/Building_B_01.png" id="5_fpand"]
-[ext_resource type="Texture2D" uid="uid://bt6xs4rulfcu5" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Buildings/Building_B_02.png" id="6_wjl0q"]
-[ext_resource type="Texture2D" uid="uid://qtc5kpg415fj" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Rocks/1.png" id="7_wwhp5"]
+[ext_resource type="Texture2D" uid="uid://b3tob1btr3x66" path="res://tiles/PNG/Props/Ball.png" id="4_5nx23"]
+[ext_resource type="Texture2D" uid="uid://bf7sgfw1rml6t" path="res://tiles/2 Objects/Rocks/5.png" id="4_ncuv5"]
+[ext_resource type="Texture2D" uid="uid://bq3x1a6wpf1mw" path="res://tiles/PNG/Buildings/Building_B_01.png" id="5_fpand"]
+[ext_resource type="Texture2D" uid="uid://bt6xs4rulfcu5" path="res://tiles/PNG/Buildings/Building_B_02.png" id="6_wjl0q"]
+[ext_resource type="Texture2D" uid="uid://qtc5kpg415fj" path="res://tiles/2 Objects/Rocks/1.png" id="7_wwhp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovngv"]
 texture = ExtResource("1_jt787")
