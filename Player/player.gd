@@ -368,6 +368,7 @@ func ghost_init():
 	rand_eye = true
 	hair_frame = randi_range(0, 2)
 	shirt_frame = randi_range(0, 1)
+	
 
 func uncontrol():
 	$Sprite/White.visible = false
