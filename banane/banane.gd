@@ -6,5 +6,6 @@ func _ready():
 	
 # call le "fall" du joueur qui rentre dans l'area2D et faire proc 1. de laughing sur tout les gens alentours
 func _on_area_2d_body_entered(body):
-	body.fall()
-	queue_free()
+	if body.PERSON_TYPE != 3:
+		body.fall()
+		queue_free()
