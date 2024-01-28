@@ -31,8 +31,8 @@ func _process(delta):
 
 
 func next_level():
-	interface.queue_free()
-	level.queue_free()
+	interface.free()
+	level.free()
 	var level_changed = false
 	for i in range(len(LEVEL_LIST)-1):
 		if level_name == LEVEL_LIST[i]:
@@ -53,7 +53,7 @@ func _input(event):
 			pause()
 		else:
 			unpause()
-			get_node("Escape").queue_free()
+			get_node("Escape").free()
 	if event is InputEventMouseButton and event.pressed and interface != null and event.position.x < 1200:
 		if interface.state == BANANA:
 			place_banana(event.position)
@@ -181,8 +181,9 @@ func load_game():
 	level.get_node("Background").scale = Vector2(1.11, 1.11)
 	interface = load("res://interface/interface.tscn").instantiate()
 	GOAL = $LevelLoader.get_node("Level_Base").get_meta("GOAL")
-	interface.get_node("Jauge").GOAL = GOAL
+
 	add_child(interface)
+	interface.get_node("Jauge").GOAL = GOAL
 	unpause()
 	if not $Game_music.playing:
 		$Game_music.playing = true

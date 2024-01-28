@@ -25,7 +25,8 @@ func get_laughing():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if get_node("../../LevelLoader/Level_Base/People")==null:return
+	if get_node("/root/World/LevelLoader/Level_Base/People")==null:return
 	$Label.text = str(GOAL)
 	rate = float(get_laughing()) / GOAL
 	move_pointer()
+	print(GOAL)
