@@ -13,6 +13,7 @@ func _process(_delta):
 func _on_button_pressed(level):
 	get_parent().level_name = get_node("/root/World").LEVEL_LIST[level]
 	get_parent().load_game()
+	get_node("../Menu_music").playing = false
 	queue_free()
 
 
