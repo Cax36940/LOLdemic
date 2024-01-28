@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var level_name : String
-enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, BUTTON4}
+enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, GHOST}
 var GOAL = 0
 var interface = null
 var controlled_player = null
@@ -13,6 +13,7 @@ const SCORE_PER_SEC = -10.
 var num_control = 0
 var num_contaminate = 0
 var num_banana = 0
+var num_ghost = 0
 var score_has_started = false # true when the player makes his first action
 
 # Called when the node enters the scene tree for the first time.
@@ -28,8 +29,11 @@ func _process(delta):
 func _input(event):
 	if event.is_action_released("escape"):
 		pause_unpause()
-	if event is InputEventMouseButton and event.pressed:
-		place_banana(event.position)
+	if event is InputEventMouseButton and event.pressed and interface != null and event.position.x < 1200:
+		if interface.state == BANANA:
+			place_banana(event.position)
+		elif interface.state == GHOST:
+			place_ghost(event.position)
 
 
 func update_score_control():
@@ -55,13 +59,27 @@ func update_score_banana():
 	num_banana += 1
 	score_has_started = true
 
+func update_score_ghost():
+	# score loss when the player places a ghost
+	score -= 20
+	num_ghost += 1
+	score_has_started = true
+
 func place_banana(pos):
-	if interface != null and interface.state == BANANA:
-		var banana = load("res://banane/banane.tscn").instantiate()
-		level.add_child(banana)
-		banana.position = pos
-		interface.button_press(BANANA)
-		update_score_banana()
+	var banana = load("res://banane/banane.tscn").instantiate()
+	level.add_child(banana)
+	banana.position = pos
+	interface.button_press(BANANA)
+	update_score_banana()
+
+func place_ghost(pos):
+	var ghost = load("res://Player/player.tscn").instantiate()
+	level.get_node("People").add_child(ghost)
+	ghost.position = pos
+	ghost.PERSON_TYPE = 3
+	ghost.ghost_init()
+	interface.button_press(GHOST)
+	update_score_ghost()
 
 func pause_unpause():
 	pause = not pause
