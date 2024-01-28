@@ -1,6 +1,6 @@
 extends Control
 
-enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, BUTTON4}
+enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, GHOST}
 var state = NO_BUTTON
 const NB_BUTTONS = 4
 
@@ -14,7 +14,7 @@ func _ready():
 # 1 - Contrôle
 # 2 - Contamination
 # 3 - Banane
-# 4 - ?
+# 4 - Ghost
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
