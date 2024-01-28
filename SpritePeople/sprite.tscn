@@ -15,48 +15,49 @@
 
 [node name="SpritePeople" type="Node2D"]
 script = ExtResource("1_dqgss")
-skin_color = Color(1, 0.87, 0.73, 1)
-eyer_frame = 4
-eyel_frame = 2
+skin_color = Color(0.8, 0.6, 0.4, 1)
+eyer_frame = 10
+eyel_frame = 10
 neck_frame = 2
-neck_color = Color(0.608518, 0.608518, 0.608518, 1)
-hair_frame = 3
-hair_color = Color(1, 1, 1, 1)
-shirt_color = Color(0.523434, 0.523445, 0.523334, 1)
+neck_color = Color(0.32095, 0.32095, 0.32095, 1)
+hair_frame = 1
+hair_color = Color(0.32768, 0.597862, 0.687827, 1)
+shirt_color = Color(0.155947, 0.124261, 0.145524, 1)
 pants_frame = 1
-pants_color = Color(0.297441, 0.240589, 0.223713, 1)
-export_code = "{\"eyel_frame\":2,\"eyelash_color\":0,\"eyer_frame\":4,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.608518362045288,\"neck_color_g\":0.608518362045288,\"neck_color_r\":0.608518362045288,\"neck_frame\":2,\"pants_color_b\":0.223712831735611,\"pants_color_g\":0.240589082241058,\"pants_color_r\":0.297440558671951,\"pants_frame\":1,\"shirt_color_b\":0.523334085941315,\"shirt_color_g\":0.523444890975952,\"shirt_color_r\":0.523434042930603,\"shirt_frame\":0,\"skin_color_b\":0.730000019073486,\"skin_color_g\":0.870000004768372,\"skin_color_r\":1}"
+pants_color = Color(0.632079, 0.619532, 0.672385, 1)
+export_code = "{\"eyel_frame\":10,\"eyelash_color\":0,\"eyer_frame\":10,\"hair_color_b\":0.687826573848724,\"hair_color_g\":0.597862064838409,\"hair_color_r\":0.327679514884949,\"hair_frame\":1,\"neck_color_b\":0.320949643850327,\"neck_color_g\":0.320949643850327,\"neck_color_r\":0.320949643850327,\"neck_frame\":2,\"pants_color_b\":0.67238450050354,\"pants_color_g\":0.619531512260437,\"pants_color_r\":0.632079124450684,\"pants_frame\":1,\"shirt_color_b\":0.145523756742477,\"shirt_color_g\":0.124261163175106,\"shirt_color_r\":0.155946865677834,\"shirt_frame\":0,\"skin_color_b\":0.400000005960464,\"skin_color_g\":0.600000023841858,\"skin_color_r\":0.800000011920929}"
 
 [node name="Sprite" type="Node2D" parent="."]
 
 [node name="Skin" type="Sprite2D" parent="Sprite"]
-modulate = Color(1, 0.87, 0.73, 1)
+modulate = Color(0.8, 0.6, 0.4, 1)
 position = Vector2(0, 5)
 texture = ExtResource("2_n1qga")
 
 [node name="Hair" type="Sprite2D" parent="Sprite"]
+modulate = Color(0.32768, 0.597862, 0.687827, 1)
 position = Vector2(0, 5)
 texture = ExtResource("4_5kjxb")
 hframes = 4
-frame = 3
+frame = 1
 
 [node name="Clothes" type="Node2D" parent="Sprite"]
 
 [node name="Pants" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.297441, 0.240589, 0.223713, 1)
+modulate = Color(0.632079, 0.619532, 0.672385, 1)
 position = Vector2(0, 5)
 texture = ExtResource("4_x325k")
 hframes = 2
 frame = 1
 
 [node name="Shirt" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.523434, 0.523445, 0.523334, 1)
+modulate = Color(0.155947, 0.124261, 0.145524, 1)
 position = Vector2(0, 5)
 texture = ExtResource("5_6tyxn")
 hframes = 2
 
 [node name="Neck" type="Sprite2D" parent="Sprite/Clothes"]
-modulate = Color(0.608518, 0.608518, 0.608518, 1)
+modulate = Color(0.32095, 0.32095, 0.32095, 1)
 position = Vector2(0, 7.5)
 texture = ExtResource("4_4mcnp")
 hframes = 10
@@ -73,7 +74,7 @@ texture = ExtResource("6_c8yp4")
 position = Vector2(-2, -1)
 texture = ExtResource("1_16xq7")
 hframes = 20
-frame = 2
+frame = 10
 
 [node name="EyelashL" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(-3.5, -2.5)
@@ -84,7 +85,7 @@ hframes = 5
 position = Vector2(2, -1)
 texture = ExtResource("1_16xq7")
 hframes = 20
-frame = 4
+frame = 10
 
 [node name="EyelashR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(3.5, -2.5)
@@ -100,9 +101,11 @@ hframes = 3
 position = Vector2(0, 5)
 texture = ExtResource("12_bo4d6")
 hframes = 6
+frame = 1
 
 [node name="White" type="Sprite2D" parent="Sprite"]
 visible = false
 position = Vector2(0, 5)
 texture = ExtResource("12_of7hn")
 hframes = 6
+frame = 1

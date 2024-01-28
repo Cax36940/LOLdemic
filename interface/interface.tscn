@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ia7wp5b455xe"]
+[gd_scene load_steps=13 format=3 uid="uid://ia7wp5b455xe"]
 
 [ext_resource type="Script" path="res://interface/Jauge.gd" id="1_sho8u"]
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_t320a"]
 [ext_resource type="Script" path="res://interface/interface.gd" id="1_vey58"]
+[ext_resource type="Texture2D" uid="uid://rpe6hntson6g" path="res://interface/sprite/cursor.png" id="4_77akc"]
 [ext_resource type="Texture2D" uid="uid://buf0j6kwsyyps" path="res://interface/sprite/progress_bar.png" id="4_a1k2d"]
 [ext_resource type="Script" path="res://interface/Timer.gd" id="4_rvgss"]
 [ext_resource type="Texture2D" uid="uid://dvtu1vgwlqi2y" path="res://interface/sprite/option_bar.png" id="5_s838l"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bqyphetalfdrj" path="res://interface/sprite/happy.png" id="7_jcpml"]
 [ext_resource type="Texture2D" uid="uid://cs3r0hdwqw8kh" path="res://interface/sprite/banana.png" id="8_waus4"]
 [ext_resource type="Texture2D" uid="uid://drxtd8b7owqsh" path="res://interface/sprite/white.png" id="9_77its"]
+[ext_resource type="Texture2D" uid="uid://duw6enynpperu" path="res://interface/sprite/ghost.png" id="10_74bf7"]
 
 [node name="Interface" type="Control"]
 process_mode = 1
@@ -40,11 +42,8 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_t320a")
 
 [node name="Pointer" type="Sprite2D" parent="Jauge"]
-z_index = 4
-rotation = 0.392699
-scale = Vector2(0.15, 0.15)
-skew = 0.785398
-texture = ExtResource("1_t320a")
+z_index = 1
+texture = ExtResource("4_77akc")
 
 [node name="ProgressBar" type="Sprite2D" parent="Jauge"]
 texture = ExtResource("4_a1k2d")
@@ -139,16 +138,19 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_waus4")
 
 [node name="Button4" type="Button" parent="."]
-modulate = Color(0, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1216.0
-offset_top = 409.0
+offset_top = 341.0
 offset_right = 1352.0
-offset_bottom = 545.0
-rotation = -1.5708
+offset_bottom = 477.0
 scale = Vector2(0.5, 0.5)
 toggle_mode = true
-icon = ExtResource("1_t320a")
+
+[node name="Ghost" type="Sprite2D" parent="Button4"]
+position = Vector2(68, 68)
+scale = Vector2(2, 2)
+texture = ExtResource("10_74bf7")
 
 [node name="Score" type="Label" parent="."]
 z_index = 4
