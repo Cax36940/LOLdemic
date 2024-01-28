@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cykhtuuq4yqu2"]
+[gd_scene load_steps=3 format=3 uid="uid://b4ns5i7a4ki5p"]
 
 [ext_resource type="Script" path="res://Menu/end_level_menu.gd" id="1_nqftn"]
-[ext_resource type="Theme" uid="uid://febop71prism" path="res://Menu/menu_ui.tres" id="2_n1eno"]
+[ext_resource type="Theme" uid="uid://blpxgs7tneqpn" path="res://Menu/menu_ui.tres" id="2_n1eno"]
 
 [node name="Escape2" type="Control"]
 top_level = true

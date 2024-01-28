@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bolshv6t6cil8"]
+[gd_scene load_steps=20 format=3 uid="uid://bolshv6t6cil8"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_i4hxi"]
 [ext_resource type="Texture2D" uid="uid://bw6xqbrdnoe5k" path="res://Player/hahah.png" id="3_f0lam"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://c12ynemo0ghot" path="res://SpritePeople/Face/eye.png" id="11_fhppx"]
 [ext_resource type="Texture2D" uid="uid://dvyplw3dbuh8x" path="res://SpritePeople/Face/eyelash.png" id="12_87l1w"]
 [ext_resource type="Texture2D" uid="uid://dtlr51itlq8qc" path="res://SpritePeople/Face/mouth.png" id="13_k150h"]
+[ext_resource type="AudioStream" uid="uid://cgpfymfd6bhj4" path="res://Sounds/152904__fmaudio__female_short_laugh_01.wav" id="14_47s6y"]
 [ext_resource type="Texture2D" uid="uid://ddavjy5o08ygb" path="res://SpritePeople/Body/black.png" id="14_aeecl"]
 [ext_resource type="Texture2D" uid="uid://buj8pmuaunket" path="res://SpritePeople/Body/white.png" id="15_73r0m"]
+[ext_resource type="AudioStream" uid="uid://tfgxv4oct0ux" path="res://Sounds/453174__joachim6bar__rire.wav" id="15_n1dvh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh8q"]
 size = Vector2(10.9091, 9.54545)
@@ -95,7 +97,7 @@ modulate = Color(0.427485, 0.427485, 0.427485, 1)
 position = Vector2(0, 7.5)
 texture = ExtResource("9_6yoak")
 hframes = 10
-frame = 2
+frame = 5
 
 [node name="Shoes" type="Sprite2D" parent="Sprite/Clothes"]
 modulate = Color(0.35, 0.35, 0.35, 1)
@@ -114,6 +116,7 @@ frame = 3
 position = Vector2(-2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
+frame = 1
 
 [node name="EyeR" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(2, -1)
@@ -125,6 +128,7 @@ frame = 3
 position = Vector2(2.5, -1.5)
 texture = ExtResource("12_87l1w")
 hframes = 5
+frame = 1
 
 [node name="Mouth" type="Sprite2D" parent="Sprite/Face"]
 position = Vector2(0, 2)
@@ -159,5 +163,11 @@ linear_accel_curve = SubResource("Curve_s6s5s")
 angle_min = -25.0
 angle_max = 25.0
 color_ramp = SubResource("Gradient_hcmoq")
+
+[node name="Laugh1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_47s6y")
+
+[node name="Laugh2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_n1dvh")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
