@@ -1777,8 +1777,13 @@ texture_region_size = Vector2i(26, 20)
 [sub_resource type="TileSet" id="TileSet_k81tg"]
 sources/0 = SubResource("TileSetAtlasSource_7spc6")
 
+<<<<<<< HEAD
+[node name="Level_Base" type="Node2D"]
+metadata/GOAL = 9
+=======
 [node name="Level_Base3" type="Node2D"]
 metadata/GOAL = 10
+>>>>>>> 8361ce5dadb996d24496978ad7be2a774f070922
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -1892,7 +1897,7 @@ hair_color = Color(0.487136, 0.364756, 0.189483, 1)
 shirt_frame = 1
 shirt_color = Color(0.645827, 0.34555, 0.619348, 1)
 pants_color = Color(0.699459, 0.532669, 0.489491, 1)
-export_code = "{\"eyel_frame\":12,\"eyelash_color\":1,\"eyer_frame\":9,\"hair_color_b\":0.189483165740967,\"hair_color_g\":0.364756107330322,\"hair_color_r\":0.487135589122772,\"hair_frame\":0,\"neck_color_b\":0.696985244750977,\"neck_color_g\":0.696985244750977,\"neck_color_r\":0.696985244750977,\"neck_frame\":7,\"pants_color_b\":0.48949122428894,\"pants_color_g\":0.532669067382813,\"pants_color_r\":0.699459075927734,\"pants_frame\":1,\"shirt_color_b\":0.619347751140594,\"shirt_color_g\":0.345549643039703,\"shirt_color_r\":0.645826518535614,\"shirt_frame\":1,\"skin_color_b\":0.340000003576279,\"skin_color_g\":0.439999997615814,\"skin_color_r\":0.699999988079071}"
+export_code = "{\"eyel_frame\":12,\"eyelash_color\":1,\"eyer_frame\":9,\"hair_color_b\":0.189483165740967,\"hair_color_g\":0.364756107330322,\"hair_color_r\":0.487135589122772,\"hair_frame\":0,\"neck_color_b\":0.696985244750977,\"neck_color_g\":0.696985244750977,\"neck_color_r\":0.696985244750977,\"neck_frame\":7,\"pants_color_b\":0.48949122428894,\"pants_color_g\":0.532669067382812,\"pants_color_r\":0.699459075927734,\"pants_frame\":1,\"shirt_color_b\":0.619347751140594,\"shirt_color_g\":0.345549643039703,\"shirt_color_r\":0.645826518535614,\"shirt_frame\":1,\"skin_color_b\":0.340000003576279,\"skin_color_g\":0.439999997615814,\"skin_color_r\":0.699999988079071}"
 
 [node name="Player6" parent="People" instance=ExtResource("2_f06ir")]
 z_index = 93
