@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cp5sp8w5fs5gl"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cp5sp8w5fs5gl"]
 
 [ext_resource type="Texture2D" uid="uid://1osrsut0aadw" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/1 Tiles/Map_tiles.png" id="1_jid6i"]
 [ext_resource type="Texture2D" uid="uid://d3h10t6bmci7r" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Trees/1.png" id="2_4d4bu"]
+[ext_resource type="Texture2D" uid="uid://dmdgonu3w7636" path="res://craftpix-net-280167-free-level-map-pixel-art-assets-pack/PNG/Props/Dot_A.png" id="2_rijs2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etj01"]
 texture = ExtResource("1_jid6i")
@@ -558,13 +559,21 @@ texture = ExtResource("1_jid6i")
 19:23/0 = 0
 20:23/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rkvti"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4vjx"]
 texture = ExtResource("2_4d4bu")
 texture_region_size = Vector2i(27, 44)
-0:0/0 = 0
 0:1/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ultmb"]
+texture = ExtResource("2_rijs2")
+8:7/0 = 0
+7:7/0 = 0
+7:8/0 = 0
+8:8/0 = 0
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_etj01")
-sources/1 = SubResource("TileSetAtlasSource_rkvti")
+sources/5 = SubResource("TileSetAtlasSource_k4vjx")
+sources/8 = SubResource("TileSetAtlasSource_ultmb")
 metadata/GOAL = 10

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://co3kaibwrnuum"]
+[gd_scene load_steps=8 format=3 uid="uid://co3kaibwrnuum"]
 
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="1_6k5bf"]
 [ext_resource type="PackedScene" uid="uid://bolshv6t6cil8" path="res://Player/player.tscn" id="2_wwe4b"]
+[ext_resource type="PackedScene" uid="uid://bs1gnssei07d3" path="res://banane/banane.tscn" id="3_0mu7t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovngv"]
 texture = ExtResource("1_6k5bf")
@@ -357,49 +358,299 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 2, 131072, 196
 [node name="People" type="Node2D" parent="."]
 
 [node name="Player" parent="People" instance=ExtResource("2_wwe4b")]
-z_index = 450
-position = Vector2(760, 450)
-skin_color = Color(0.59, 0.29, 0, 1)
-eyer_frame = 17
-eyel_frame = 16
-eyelash_color = 4
-neck_frame = 2
-neck_color = Color(0.76989, 0.76989, 0.76989, 1)
-hair_frame = 2
-hair_color = Color(0.129523, 0.627468, 0.157045, 1)
-shirt_color = Color(0.994491, 0.736805, 0.921818, 1)
-pants_frame = 0
-pants_color = Color(0.0334389, 0.162141, 0.0898713, 1)
-export_code = "{\"eyel_frame\":16,\"eyelash_color\":4,\"eyer_frame\":17,\"hair_color_b\":0.157045215368271,\"hair_color_g\":0.62746798992157,\"hair_color_r\":0.129523366689682,\"hair_frame\":2,\"neck_color_b\":0.769890487194061,\"neck_color_g\":0.769890487194061,\"neck_color_r\":0.769890487194061,\"neck_frame\":2,\"pants_color_b\":0.0898712500929832,\"pants_color_g\":0.162141352891922,\"pants_color_r\":0.0334389396011829,\"pants_frame\":0,\"shirt_color_b\":0.92181807756424,\"shirt_color_g\":0.736805319786072,\"shirt_color_r\":0.994491279125214,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.28999999165535,\"skin_color_r\":0.589999973773956}"
+z_index = 467
+position = Vector2(457, 467)
+skin_color = Color(0.6, 0.3, 0, 1)
+eyer_frame = 2
+eyel_frame = 4
+neck_frame = 5
+neck_color = Color(0.408491, 0.408491, 0.408491, 1)
+hair_color = Color(0.236098, 0.523568, 0.778341, 1)
+shirt_color = Color(0.760075, 0.790107, 0.833857, 1)
+pants_color = Color(0.817762, 0.603741, 0.747752, 1)
+export_code = "{\"eyel_frame\":4,\"eyelash_color\":0,\"eyer_frame\":2,\"hair_color_b\":0.77834141254425,\"hair_color_g\":0.523567736148834,\"hair_color_r\":0.236097693443298,\"hair_frame\":0,\"neck_color_b\":0.408491164445877,\"neck_color_g\":0.408491164445877,\"neck_color_r\":0.408491164445877,\"neck_frame\":5,\"pants_color_b\":0.74775230884552,\"pants_color_g\":0.60374128818512,\"pants_color_r\":0.817762017250061,\"pants_frame\":1,\"shirt_color_b\":0.833857178688049,\"shirt_color_g\":0.790106534957886,\"shirt_color_r\":0.760075211524963,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
 
 [node name="Player2" parent="People" instance=ExtResource("2_wwe4b")]
-z_index = 550
-position = Vector2(810, 550)
-skin_color = Color(0.7, 0.4, 0.2, 1)
-eyer_frame = 3
-eyel_frame = 4
-eyelash_color = 3
-neck_frame = 2
-neck_color = Color(0.585738, 0.585738, 0.585738, 1)
-hair_frame = 0
-hair_color = Color(0.102729, 0.297567, 0.0535597, 1)
-shirt_color = Color(0.271204, 0.33888, 0.330082, 1)
+z_index = 547
+position = Vector2(493, 547)
+skin_color = Color(0.7, 0.44, 0.34, 1)
+eyer_frame = 14
+eyel_frame = 14
+eyelash_color = 1
+neck_frame = 8
+neck_color = Color(0.367166, 0.367166, 0.367166, 1)
+hair_frame = 1
+hair_color = Color(0.387985, 0.154875, 0.0860809, 1)
+shirt_color = Color(0.512892, 0.511769, 0.543733, 1)
 pants_frame = 0
-pants_color = Color(0.882347, 0.305856, 0.47613, 1)
-export_code = "{\"eyel_frame\":4,\"eyelash_color\":3,\"eyer_frame\":3,\"hair_color_b\":0.0535596683621407,\"hair_color_g\":0.297566711902618,\"hair_color_r\":0.102728933095932,\"hair_frame\":0,\"neck_color_b\":0.585737645626068,\"neck_color_g\":0.585737645626068,\"neck_color_r\":0.585737645626068,\"neck_frame\":2,\"pants_color_b\":0.476129651069641,\"pants_color_g\":0.305856466293335,\"pants_color_r\":0.882347106933594,\"pants_frame\":0,\"shirt_color_b\":0.330081939697266,\"shirt_color_g\":0.338879972696304,\"shirt_color_r\":0.27120366692543,\"shirt_frame\":0,\"skin_color_b\":0.200000002980232,\"skin_color_g\":0.400000005960464,\"skin_color_r\":0.699999988079071}"
+pants_color = Color(0.436723, 0.139507, 0.10897, 1)
+export_code = "{\"eyel_frame\":14,\"eyelash_color\":1,\"eyer_frame\":14,\"hair_color_b\":0.086080901324749,\"hair_color_g\":0.154875442385674,\"hair_color_r\":0.38798451423645,\"hair_frame\":1,\"neck_color_b\":0.367165595293045,\"neck_color_g\":0.367165595293045,\"neck_color_r\":0.367165595293045,\"neck_frame\":8,\"pants_color_b\":0.108970195055008,\"pants_color_g\":0.139507293701172,\"pants_color_r\":0.43672314286232,\"pants_frame\":0,\"shirt_color_b\":0.543733477592468,\"shirt_color_g\":0.511768698692322,\"shirt_color_r\":0.51289165019989,\"shirt_frame\":0,\"skin_color_b\":0.340000003576279,\"skin_color_g\":0.439999997615814,\"skin_color_r\":0.699999988079071}"
 
 [node name="Player3" parent="People" instance=ExtResource("2_wwe4b")]
-z_index = 650
-position = Vector2(760, 650)
-skin_color = Color(0.47, 0.24, 0, 1)
-eyer_frame = 0
+z_index = 173
+position = Vector2(878, 173)
+skin_color = Color(0.4, 0.2, 0.2, 1)
+eyer_frame = 2
+eyel_frame = 15
+eyelash_color = 1
+neck_color = Color(0.45858, 0.45858, 0.45858, 1)
+hair_frame = 2
+hair_color = Color(0.372278, 0.0535357, 0.291298, 1)
+shirt_color = Color(0.870322, 0.788521, 0.743706, 1)
+pants_color = Color(0.290534, 0.0336696, 0.549927, 1)
+export_code = "{\"eyel_frame\":15,\"eyelash_color\":1,\"eyer_frame\":2,\"hair_color_b\":0.291297733783722,\"hair_color_g\":0.053535670042038,\"hair_color_r\":0.372277528047562,\"hair_frame\":2,\"neck_color_b\":0.458579927682877,\"neck_color_g\":0.458579927682877,\"neck_color_r\":0.458579927682877,\"neck_frame\":2,\"pants_color_b\":0.54992663860321,\"pants_color_g\":0.0336695834994316,\"pants_color_r\":0.290534257888794,\"pants_frame\":1,\"shirt_color_b\":0.743705570697784,\"shirt_color_g\":0.78852117061615,\"shirt_color_r\":0.870322048664093,\"shirt_frame\":0,\"skin_color_b\":0.200000002980232,\"skin_color_g\":0.200000002980232,\"skin_color_r\":0.400000005960464}"
+
+[node name="Player4" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 174
+position = Vector2(136, 174)
+skin_color = Color(0.5, 0.25, 0.25, 1)
+eyer_frame = 10
+eyel_frame = 9
+eyelash_color = 1
+neck_frame = 8
+neck_color = Color(0.674065, 0.674065, 0.674065, 1)
+hair_color = Color(0.0822911, 0.399395, 0.173255, 1)
+shirt_color = Color(0.351508, 0.11238, 0.00291536, 1)
+pants_color = Color(0.602486, 0.199009, 0.356313, 1)
+export_code = "{\"eyel_frame\":9,\"eyelash_color\":1,\"eyer_frame\":10,\"hair_color_b\":0.173254981637001,\"hair_color_g\":0.399395406246185,\"hair_color_r\":0.0822911262512207,\"hair_frame\":0,\"neck_color_b\":0.674065113067627,\"neck_color_g\":0.674065113067627,\"neck_color_r\":0.674065113067627,\"neck_frame\":8,\"pants_color_b\":0.356313049793243,\"pants_color_g\":0.199008584022522,\"pants_color_r\":0.602486133575439,\"pants_frame\":1,\"shirt_color_b\":0.00291536399163306,\"shirt_color_g\":0.112380467355251,\"shirt_color_r\":0.351508408784866,\"shirt_frame\":0,\"skin_color_b\":0.25,\"skin_color_g\":0.25,\"skin_color_r\":0.5}"
+
+[node name="Player5" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 511
+position = Vector2(162, 511)
+skin_color = Color(0.5, 0.25, 0.25, 1)
+eyer_frame = 1
+eyel_frame = 3
+eyelash_color = 1
+neck_frame = 3
+neck_color = Color(0.735379, 0.735379, 0.735379, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_frame = 1
+shirt_color = Color(0.495691, 0.888935, 0.357971, 1)
+pants_color = Color(0.884149, 0.892248, 0.89476, 1)
+export_code = "{\"eyel_frame\":3,\"eyelash_color\":1,\"eyer_frame\":1,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.735379457473755,\"neck_color_g\":0.735379457473755,\"neck_color_r\":0.735379457473755,\"neck_frame\":3,\"pants_color_b\":0.89475953578949,\"pants_color_g\":0.892247974872589,\"pants_color_r\":0.884148895740509,\"pants_frame\":1,\"shirt_color_b\":0.357971012592316,\"shirt_color_g\":0.888935148715973,\"shirt_color_r\":0.495691120624542,\"shirt_frame\":1,\"skin_color_b\":0.25,\"skin_color_g\":0.25,\"skin_color_r\":0.5}"
+
+[node name="Player6" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 437
+position = Vector2(93, 437)
+skin_color = Color(0.5, 0.25, 0.25, 1)
+eyer_frame = 18
+eyel_frame = 18
+eyelash_color = 1
+neck_frame = 9
+neck_color = Color(0.339303, 0.339303, 0.339303, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_color = Color(0.825406, 0.773706, 0.806711, 1)
+pants_color = Color(0.72206, 0.98105, 0.804034, 1)
+export_code = "{\"eyel_frame\":18,\"eyelash_color\":1,\"eyer_frame\":18,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.339302510023117,\"neck_color_g\":0.339302510023117,\"neck_color_r\":0.339302510023117,\"neck_frame\":9,\"pants_color_b\":0.804034352302551,\"pants_color_g\":0.981050431728363,\"pants_color_r\":0.722059726715088,\"pants_frame\":1,\"shirt_color_b\":0.806711435317993,\"shirt_color_g\":0.7737056016922,\"shirt_color_r\":0.825406074523926,\"shirt_frame\":0,\"skin_color_b\":0.25,\"skin_color_g\":0.25,\"skin_color_r\":0.5}"
+
+[node name="Player7" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 572
+position = Vector2(107, 572)
+skin_color = Color(0.9, 0.72, 0.56, 1)
+eyer_frame = 6
+eyel_frame = 6
+neck_frame = 4
+neck_color = Color(0.439634, 0.439634, 0.439634, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_color = Color(0.0297551, 0.0855877, 0.0163835, 1)
+pants_color = Color(0.020164, 0.0125533, 0.0130748, 1)
+export_code = "{\"eyel_frame\":6,\"eyelash_color\":0,\"eyer_frame\":6,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.439634203910828,\"neck_color_g\":0.439634203910828,\"neck_color_r\":0.439634203910828,\"neck_frame\":4,\"pants_color_b\":0.0130747780203819,\"pants_color_g\":0.0125532820820808,\"pants_color_r\":0.0201640129089355,\"pants_frame\":1,\"shirt_color_b\":0.0163834765553474,\"shirt_color_g\":0.0855876877903938,\"shirt_color_r\":0.0297550745308399,\"shirt_frame\":0,\"skin_color_b\":0.560000002384186,\"skin_color_g\":0.720000028610229,\"skin_color_r\":0.899999976158142}"
+
+[node name="Player8" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 451
+position = Vector2(222, 451)
+skin_color = Color(0.6, 0.3, 0, 1)
+eyer_frame = 17
 eyel_frame = 16
-eyelash_color = 0
-neck_frame = 2
-neck_color = Color(0.59834, 0.59834, 0.59834, 1)
+neck_frame = 6
+neck_color = Color(0.639914, 0.639914, 0.639914, 1)
 hair_frame = 1
-hair_color = Color(0.68253, 0.692614, 0.706984, 1)
-shirt_color = Color(0.498475, 0.380288, 0.293816, 1)
+hair_color = Color(0.273739, 0.608429, 0.508143, 1)
+shirt_frame = 1
+shirt_color = Color(0.979583, 0.611242, 0.846103, 1)
+pants_color = Color(0.208379, 0.276552, 0.173577, 1)
+export_code = "{\"eyel_frame\":16,\"eyelash_color\":0,\"eyer_frame\":17,\"hair_color_b\":0.508143186569214,\"hair_color_g\":0.608429193496704,\"hair_color_r\":0.273739159107208,\"hair_frame\":1,\"neck_color_b\":0.639914333820343,\"neck_color_g\":0.639914333820343,\"neck_color_r\":0.639914333820343,\"neck_frame\":6,\"pants_color_b\":0.173576593399048,\"pants_color_g\":0.276551902294159,\"pants_color_r\":0.208379074931145,\"pants_frame\":1,\"shirt_color_b\":0.846102654933929,\"shirt_color_g\":0.611242413520813,\"shirt_color_r\":0.979583263397217,\"shirt_frame\":1,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+
+[node name="Player9" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 581
+position = Vector2(210, 581)
+skin_color = Color(0.8, 0.56, 0.45, 1)
+eyer_frame = 8
+eyel_frame = 8
+eyelash_color = 2
+neck_frame = 1
+neck_color = Color(0.609831, 0.609831, 0.609831, 1)
+hair_color = Color(0.0308472, 0.117528, 0.510104, 1)
+shirt_color = Color(0.380288, 0.332384, 0.322378, 1)
+pants_color = Color(0.951125, 0.463148, 0.174795, 1)
+export_code = "{\"eyel_frame\":8,\"eyelash_color\":2,\"eyer_frame\":8,\"hair_color_b\":0.510103940963745,\"hair_color_g\":0.117527537047863,\"hair_color_r\":0.0308471936732531,\"hair_frame\":0,\"neck_color_b\":0.609831273555756,\"neck_color_g\":0.609831273555756,\"neck_color_r\":0.609831273555756,\"neck_frame\":1,\"pants_color_b\":0.17479532957077,\"pants_color_g\":0.463148266077042,\"pants_color_r\":0.951124668121338,\"pants_frame\":1,\"shirt_color_b\":0.322378188371658,\"shirt_color_g\":0.332383632659912,\"shirt_color_r\":0.380288183689117,\"shirt_frame\":0,\"skin_color_b\":0.449999988079071,\"skin_color_g\":0.560000002384186,\"skin_color_r\":0.800000011920929}"
+
+[node name="Player10" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 551
+position = Vector2(291, 551)
+skin_color = Color(0.6, 0.35, 0.24, 1)
+eyer_frame = 19
+eyel_frame = 19
+neck_frame = 4
+neck_color = Color(0.390983, 0.390983, 0.390983, 1)
+hair_frame = 2
+hair_color = Color(0.350285, 0.20363, 0.225447, 1)
+shirt_color = Color(0.445977, 0.331153, 0.312019, 1)
 pants_frame = 0
-pants_color = Color(0.479744, 0.641561, 0.588732, 1)
-export_code = "{\"eyel_frame\":16,\"eyelash_color\":0,\"eyer_frame\":0,\"hair_color_b\":0.706984102725983,\"hair_color_g\":0.692613780498505,\"hair_color_r\":0.682530283927917,\"hair_frame\":1,\"neck_color_b\":0.59833961725235,\"neck_color_g\":0.59833961725235,\"neck_color_r\":0.59833961725235,\"neck_frame\":2,\"pants_color_b\":0.588732361793518,\"pants_color_g\":0.641560554504395,\"pants_color_r\":0.479743987321854,\"pants_frame\":0,\"shirt_color_b\":0.293816387653351,\"shirt_color_g\":0.380287557840347,\"shirt_color_r\":0.49847537279129,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.239999994635582,\"skin_color_r\":0.469999998807907}"
+pants_color = Color(0.463569, 0.323377, 0.391596, 1)
+export_code = "{\"eyel_frame\":19,\"eyelash_color\":0,\"eyer_frame\":19,\"hair_color_b\":0.225447490811348,\"hair_color_g\":0.203629806637764,\"hair_color_r\":0.350285053253174,\"hair_frame\":2,\"neck_color_b\":0.390983462333679,\"neck_color_g\":0.390983462333679,\"neck_color_r\":0.390983462333679,\"neck_frame\":4,\"pants_color_b\":0.391596436500549,\"pants_color_g\":0.32337749004364,\"pants_color_r\":0.46356874704361,\"pants_frame\":0,\"shirt_color_b\":0.312019318342209,\"shirt_color_g\":0.331152856349945,\"shirt_color_r\":0.445977449417114,\"shirt_frame\":0,\"skin_color_b\":0.239999994635582,\"skin_color_g\":0.349999994039536,\"skin_color_r\":0.600000023841858}"
+
+[node name="Player11" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 490
+position = Vector2(298, 490)
+skin_color = Color(0.6, 0.3, 0, 1)
+eyer_frame = 16
+eyel_frame = 0
+eyelash_color = 1
+neck_frame = 6
+neck_color = Color(0.79462, 0.79462, 0.79462, 1)
+hair_frame = 2
+hair_color = Color(0.50863, 0.496006, 0.515166, 1)
+shirt_color = Color(0.0515464, 0.026846, 0.0580744, 1)
+pants_color = Color(0.159931, 0.176808, 0.205699, 1)
+export_code = "{\"eyel_frame\":0,\"eyelash_color\":1,\"eyer_frame\":16,\"hair_color_b\":0.51516592502594,\"hair_color_g\":0.496006011962891,\"hair_color_r\":0.508630394935608,\"hair_frame\":2,\"neck_color_b\":0.794619739055634,\"neck_color_g\":0.794619739055634,\"neck_color_r\":0.794619739055634,\"neck_frame\":6,\"pants_color_b\":0.20569896697998,\"pants_color_g\":0.176807686686516,\"pants_color_r\":0.159930780529976,\"pants_frame\":1,\"shirt_color_b\":0.0580743663012981,\"shirt_color_g\":0.026845982298255,\"shirt_color_r\":0.0515463650226593,\"shirt_frame\":0,\"skin_color_b\":0,\"skin_color_g\":0.300000011920929,\"skin_color_r\":0.600000023841858}"
+
+[node name="Player12" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 460
+position = Vector2(801, 460)
+skin_color = Color(0.59, 0.29, 0, 1)
+eyel_frame = 10
+eyelash_color = 1
+neck_frame = 6
+neck_color = Color(0.72147, 0.72147, 0.72147, 1)
+hair_frame = 2
+hair_color = Color(0.456351, 0.334468, 0.429148, 1)
+shirt_frame = 1
+shirt_color = Color(0.56798, 0.24711, 0.0351451, 1)
+pants_color = Color(0.0922536, 0.0827445, 0.0829122, 1)
+export_code = "{\"eyel_frame\":10,\"eyelash_color\":1,\"eyer_frame\":11,\"hair_color_b\":0.429148107767105,\"hair_color_g\":0.334468185901642,\"hair_color_r\":0.456350773572922,\"hair_frame\":2,\"neck_color_b\":0.721469879150391,\"neck_color_g\":0.721469879150391,\"neck_color_r\":0.721469879150391,\"neck_frame\":6,\"pants_color_b\":0.0829121842980385,\"pants_color_g\":0.0827445313334465,\"pants_color_r\":0.0922535881400108,\"pants_frame\":1,\"shirt_color_b\":0.035145103931427,\"shirt_color_g\":0.24711012840271,\"shirt_color_r\":0.567980468273163,\"shirt_frame\":1,\"skin_color_b\":0,\"skin_color_g\":0.28999999165535,\"skin_color_r\":0.589999973773956}"
+
+[node name="Player13" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 546
+position = Vector2(754, 546)
+skin_color = Color(0.8, 0.6, 0.4, 1)
+eyer_frame = 3
+eyel_frame = 4
+eyelash_color = 1
+neck_frame = 4
+neck_color = Color(0.481204, 0.481204, 0.481204, 1)
+hair_frame = 1
+hair_color = Color(0.23953, 0.269616, 0.253054, 1)
+shirt_color = Color(0.693181, 0.871241, 0.703484, 1)
+pants_color = Color(0.053781, 0.0279516, 0.0225825, 1)
+export_code = "{\"eyel_frame\":4,\"eyelash_color\":1,\"eyer_frame\":3,\"hair_color_b\":0.253054171800613,\"hair_color_g\":0.269615828990936,\"hair_color_r\":0.239529877901077,\"hair_frame\":1,\"neck_color_b\":0.481204390525818,\"neck_color_g\":0.481204390525818,\"neck_color_r\":0.481204390525818,\"neck_frame\":4,\"pants_color_b\":0.0225825197994709,\"pants_color_g\":0.0279515963047743,\"pants_color_r\":0.053780984133482,\"pants_frame\":1,\"shirt_color_b\":0.703483760356903,\"shirt_color_g\":0.871241271495819,\"shirt_color_r\":0.693181097507477,\"shirt_frame\":0,\"skin_color_b\":0.400000005960464,\"skin_color_g\":0.600000023841858,\"skin_color_r\":0.800000011920929}"
+
+[node name="Player14" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 486
+position = Vector2(707, 486)
+eyer_frame = 10
+eyel_frame = 9
+eyelash_color = 4
+neck_frame = 9
+neck_color = Color(0.6726, 0.6726, 0.6726, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_color = Color(0.526738, 0.464734, 0.531902, 1)
+pants_color = Color(0.0162389, 0.0383878, 0.0304921, 1)
+export_code = "{\"eyel_frame\":9,\"eyelash_color\":4,\"eyer_frame\":10,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.672600150108337,\"neck_color_g\":0.672600150108337,\"neck_color_r\":0.672600150108337,\"neck_frame\":9,\"pants_color_b\":0.0304920729249716,\"pants_color_g\":0.0383877828717232,\"pants_color_r\":0.0162388756871223,\"pants_frame\":1,\"shirt_color_b\":0.531901657581329,\"shirt_color_g\":0.464733839035034,\"shirt_color_r\":0.526738226413727,\"shirt_frame\":0,\"skin_color_b\":0.529999971389771,\"skin_color_g\":0.720000028610229,\"skin_color_r\":0.899999976158142}"
+
+[node name="Player15" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 557
+position = Vector2(407, 557)
+skin_color = Color(0.96, 0.78, 0.56, 1)
+eyer_frame = 13
+eyel_frame = 13
+eyelash_color = 1
+neck_frame = 5
+neck_color = Color(0.239321, 0.239321, 0.239321, 1)
+hair_color = Color(0.625959, 0.375732, 0.23517, 1)
+shirt_color = Color(0.621977, 0.277935, 0.537178, 1)
+pants_color = Color(0.528633, 0.310178, 0.462751, 1)
+export_code = "{\"eyel_frame\":13,\"eyelash_color\":1,\"eyer_frame\":13,\"hair_color_b\":0.235169798135757,\"hair_color_g\":0.375731617212296,\"hair_color_r\":0.625959455966949,\"hair_frame\":0,\"neck_color_b\":0.239320531487465,\"neck_color_g\":0.239320531487465,\"neck_color_r\":0.239320531487465,\"neck_frame\":5,\"pants_color_b\":0.46275070309639,\"pants_color_g\":0.310178101062775,\"pants_color_r\":0.52863335609436,\"pants_frame\":1,\"shirt_color_b\":0.537178456783295,\"shirt_color_g\":0.277934908866882,\"shirt_color_r\":0.621977388858795,\"shirt_frame\":0,\"skin_color_b\":0.560000002384186,\"skin_color_g\":0.779999971389771,\"skin_color_r\":0.959999978542328}"
+
+[node name="Player16" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 549
+position = Vector2(686, 549)
+skin_color = Color(0.59, 0.29, 0, 1)
+eyer_frame = 1
+eyel_frame = 4
+eyelash_color = 3
+neck_frame = 3
+neck_color = Color(0.249307, 0.249307, 0.249307, 1)
+hair_frame = 2
+hair_color = Color(0.518988, 0.164291, 0.350954, 1)
+shirt_frame = 1
+shirt_color = Color(0.00565962, 0.019883, 0.0183816, 1)
+pants_frame = 0
+pants_color = Color(0.193524, 0.217959, 0.211232, 1)
+export_code = "{\"eyel_frame\":4,\"eyelash_color\":3,\"eyer_frame\":1,\"hair_color_b\":0.350953787565231,\"hair_color_g\":0.16429091989994,\"hair_color_r\":0.518987715244293,\"hair_frame\":2,\"neck_color_b\":0.249307289719582,\"neck_color_g\":0.249307289719582,\"neck_color_r\":0.249307289719582,\"neck_frame\":3,\"pants_color_b\":0.211232170462608,\"pants_color_g\":0.217959463596344,\"pants_color_r\":0.193524241447449,\"pants_frame\":0,\"shirt_color_b\":0.0183816142380238,\"shirt_color_g\":0.0198830328881741,\"shirt_color_r\":0.00565961934626102,\"shirt_frame\":1,\"skin_color_b\":0,\"skin_color_g\":0.28999999165535,\"skin_color_r\":0.589999973773956}"
+
+[node name="Player17" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 583
+position = Vector2(604, 583)
+skin_color = Color(0.95, 0.76, 0.56, 1)
+eyer_frame = 18
+eyel_frame = 18
+eyelash_color = 3
+neck_frame = 9
+neck_color = Color(0.281073, 0.281073, 0.281073, 1)
+hair_color = Color(0.740434, 0.717155, 0.72177, 1)
+shirt_color = Color(0.147358, 0.538275, 0.0399635, 1)
+pants_color = Color(0.0505155, 0.422755, 0.213252, 1)
+export_code = "{\"eyel_frame\":18,\"eyelash_color\":3,\"eyer_frame\":18,\"hair_color_b\":0.721769869327545,\"hair_color_g\":0.7171550989151,\"hair_color_r\":0.740434348583221,\"hair_frame\":0,\"neck_color_b\":0.281073004007339,\"neck_color_g\":0.281073004007339,\"neck_color_r\":0.281073004007339,\"neck_frame\":9,\"pants_color_b\":0.21325159072876,\"pants_color_g\":0.422755211591721,\"pants_color_r\":0.0505154617130756,\"pants_frame\":1,\"shirt_color_b\":0.0399635061621666,\"shirt_color_g\":0.538274943828583,\"shirt_color_r\":0.147358357906342,\"shirt_frame\":0,\"skin_color_b\":0.560000002384186,\"skin_color_g\":0.759999990463257,\"skin_color_r\":0.949999988079071}"
+
+[node name="Player18" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 294
+position = Vector2(374, 294)
+skin_color = Color(0.7, 0.4, 0.2, 1)
+eyer_frame = 9
+eyel_frame = 12
+eyelash_color = 1
+neck_frame = 4
+neck_color = Color(0.208782, 0.208782, 0.208782, 1)
+hair_frame = 3
+hair_color = Color(1, 1, 1, 1)
+shirt_frame = 1
+shirt_color = Color(0.578554, 0.555768, 0.655261, 1)
+pants_frame = 0
+pants_color = Color(0.143364, 0.0508816, 0.933462, 1)
+export_code = "{\"eyel_frame\":12,\"eyelash_color\":1,\"eyer_frame\":9,\"hair_color_b\":1,\"hair_color_g\":1,\"hair_color_r\":1,\"hair_frame\":3,\"neck_color_b\":0.208781510591507,\"neck_color_g\":0.208781510591507,\"neck_color_r\":0.208781510591507,\"neck_frame\":4,\"pants_color_b\":0.933462202548981,\"pants_color_g\":0.0508815757930279,\"pants_color_r\":0.143363580107689,\"pants_frame\":0,\"shirt_color_b\":0.655261397361755,\"shirt_color_g\":0.555767595767975,\"shirt_color_r\":0.578554272651672,\"shirt_frame\":1,\"skin_color_b\":0.200000002980232,\"skin_color_g\":0.400000005960464,\"skin_color_r\":0.699999988079071}"
+
+[node name="Player19" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 273
+position = Vector2(263, 273)
+skin_color = Color(0.7, 0.4, 0.2, 1)
+eyel_frame = 15
+neck_frame = 5
+neck_color = Color(0.422035, 0.422035, 0.422035, 1)
+hair_frame = 1
+hair_color = Color(0.343464, 0.250922, 0.210122, 1)
+shirt_color = Color(0.489236, 0.691807, 0.588827, 1)
+pants_color = Color(0.653872, 0.867597, 0.901413, 1)
+export_code = "{\"eyel_frame\":15,\"eyelash_color\":0,\"eyer_frame\":11,\"hair_color_b\":0.21012245118618,\"hair_color_g\":0.250922471284866,\"hair_color_r\":0.343464314937592,\"hair_frame\":1,\"neck_color_b\":0.42203477025032,\"neck_color_g\":0.42203477025032,\"neck_color_r\":0.42203477025032,\"neck_frame\":5,\"pants_color_b\":0.901412725448608,\"pants_color_g\":0.867596566677094,\"pants_color_r\":0.653872191905975,\"pants_frame\":1,\"shirt_color_b\":0.588827013969421,\"shirt_color_g\":0.691806733608246,\"shirt_color_r\":0.4892358481884,\"shirt_frame\":0,\"skin_color_b\":0.200000002980232,\"skin_color_g\":0.400000005960464,\"skin_color_r\":0.699999988079071}"
+
+[node name="Player20" parent="People" instance=ExtResource("2_wwe4b")]
+z_index = 378
+position = Vector2(763, 378)
+skin_color = Color(0.4, 0.2, 0.2, 1)
+eyer_frame = 4
+eyel_frame = 4
+eyelash_color = 1
+neck_frame = 0
+neck_color = Color(0.573946, 0.573946, 0.573946, 1)
+hair_frame = 2
+hair_color = Color(0.793294, 0.159758, 0.781678, 1)
+shirt_color = Color(0.965561, 0.366891, 0.207728, 1)
+pants_color = Color(0.245408, 0.726285, 0.293405, 1)
+export_code = "{\"eyel_frame\":4,\"eyelash_color\":1,\"eyer_frame\":4,\"hair_color_b\":0.781677842140198,\"hair_color_g\":0.159757643938065,\"hair_color_r\":0.793293654918671,\"hair_frame\":2,\"neck_color_b\":0.573946416378021,\"neck_color_g\":0.573946416378021,\"neck_color_r\":0.573946416378021,\"neck_frame\":0,\"pants_color_b\":0.293405443429947,\"pants_color_g\":0.726284682750702,\"pants_color_r\":0.245408073067665,\"pants_frame\":1,\"shirt_color_b\":0.207728058099747,\"shirt_color_g\":0.366890996694565,\"shirt_color_r\":0.965560674667358,\"shirt_frame\":0,\"skin_color_b\":0.200000002980232,\"skin_color_g\":0.200000002980232,\"skin_color_r\":0.400000005960464}"
+
+[node name="Banane" parent="." instance=ExtResource("3_0mu7t")]
+position = Vector2(390, 429)
