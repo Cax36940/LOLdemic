@@ -107,6 +107,9 @@ func place_ghost(pos):
 	update_score_ghost()
 
 func end_level_menu():
+	paused = true
+	$LevelLoader.get_tree().paused = paused
+	interface.get_tree().paused = paused
 	var end_level_menu = load("res://Menu/end_level_menu.tscn").instantiate()
 	add_child(end_level_menu)
 	end_level_menu.get_node("Label").text = str(int(score))
