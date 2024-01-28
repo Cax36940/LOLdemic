@@ -356,15 +356,17 @@ func _ready():
 		MAX_SPEED = 30
 		CHANGE_MOVE_PROB = 0.006
 	elif PERSON_TYPE == 3:
-		MAX_SPEED = 25
-		CHANGE_MOVE_PROB = 0.002
-		modulate = Color("#adadad8f")
-		import_code = '{"eyel_frame":4,"eyelash_color":0,"eyer_frame":4,"hair_color_b":0.678431391716003,"hair_color_g":0.678431391716003,"hair_color_r":0.678431391716003,"hair_frame":2,"mouth_frame":0,"neck_color_b":0.678431391716003,"neck_color_g":0.678431391716003,"neck_color_r":0.678431391716003,"neck_frame":2,"pants_color_b":0.678431391716003,"pants_color_g":0.678431391716003,"pants_color_r":0.678431391716003,"pants_frame":1,"shirt_color_b":0.678431391716003,"shirt_color_g":0.678431391716003,"shirt_color_r":0.678431391716003,"shirt_frame":0,"skin_color_b":0.678431391716003,"skin_color_g":0.678431391716003,"skin_color_r":0.678431391716003}'
-		rand_eye = true
-		hair_frame = randi_range(0, 2)
-		shirt_frame = randi_range(0, 1)
+		ghost_init()
 	rand_move()
-	
+
+func ghost_init():
+	MAX_SPEED = 25
+	CHANGE_MOVE_PROB = 0.002
+	modulate = Color("#adadad8f")
+	import_code = '{"eyel_frame":4,"eyelash_color":0,"eyer_frame":4,"hair_color_b":0.678431391716003,"hair_color_g":0.678431391716003,"hair_color_r":0.678431391716003,"hair_frame":2,"mouth_frame":0,"neck_color_b":0.678431391716003,"neck_color_g":0.678431391716003,"neck_color_r":0.678431391716003,"neck_frame":2,"pants_color_b":0.678431391716003,"pants_color_g":0.678431391716003,"pants_color_r":0.678431391716003,"pants_frame":1,"shirt_color_b":0.678431391716003,"shirt_color_g":0.678431391716003,"shirt_color_r":0.678431391716003,"shirt_frame":0,"skin_color_b":0.678431391716003,"skin_color_g":0.678431391716003,"skin_color_r":0.678431391716003}'
+	rand_eye = true
+	hair_frame = randi_range(0, 2)
+	shirt_frame = randi_range(0, 1)
 
 func uncontrol():
 	$Sprite/White.visible = false
