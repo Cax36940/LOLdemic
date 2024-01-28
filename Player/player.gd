@@ -346,6 +346,7 @@ func update_line():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	is_ready = true
+	import_code = export_code
 	rand_people = init_people_randomly and not Engine.is_editor_hint()
 	if PERSON_TYPE == 1:
 		MAX_SPEED = 80
