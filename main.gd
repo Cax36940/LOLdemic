@@ -29,7 +29,7 @@ func _process(delta):
 func _input(event):
 	if event.is_action_released("escape"):
 		pause_unpause()
-	if event is InputEventMouseButton and event.pressed and interface != null:
+	if event is InputEventMouseButton and event.pressed and interface != null and event.position.x < 1200:
 		if interface.state == BANANA:
 			place_banana(event.position)
 		elif interface.state == GHOST:
