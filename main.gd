@@ -160,7 +160,6 @@ func load_game():
 	num_ghost = 0
 	score = SCORE_INIT
 	score_has_started = false
-	paused = false
 	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
 	$LevelLoader.add_child(level)
 	level.name = "Level_Base"
@@ -169,3 +168,4 @@ func load_game():
 	GOAL = $LevelLoader.get_node("Level_Base").get_meta("GOAL")
 	interface.get_node("Jauge").GOAL = GOAL
 	add_child(interface)
+	unpause()
