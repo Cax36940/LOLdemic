@@ -2,6 +2,7 @@
 extends CharacterBody2D
 @export var MAX_SPEED : int = 50
 @export var laughing : float = 0.
+@export_enum("Normal", "Child", "Senior", "Ghost") var PERSON_TYPE: int = 0
 
 var speed = 1.
 var dx = 0
@@ -10,6 +11,7 @@ var controlled = false
 var distance = randf() * PI #pour l'animation, potentiellement à optimiser
 var timer = randf() * PI #pour l'animation, potentiellement à optimiser
 var fallen = false
+var ghost_cooldown = 0.
 
 var CHANGE_MOVE_PROB = 0.01
 var LAUGH_TIME = 10. # temps de parcours linéaire de la jauge 2
@@ -344,8 +346,24 @@ func update_line():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	is_ready = true
-	rand_move()
 	rand_people = init_people_randomly and not Engine.is_editor_hint()
+	if PERSON_TYPE == 1:
+		MAX_SPEED = 80
+		SPREAD_RATE_COEF = 0.2
+		CHANGE_MOVE_PROB = 0.02
+		scale = Vector2(1.8, 1.8)
+	elif PERSON_TYPE == 2:
+		MAX_SPEED = 30
+		CHANGE_MOVE_PROB = 0.006
+	elif PERSON_TYPE == 3:
+		MAX_SPEED = 25
+		CHANGE_MOVE_PROB = 0.002
+		modulate = Color("#adadad8f")
+		import_code = '{"eyel_frame":4,"eyelash_color":0,"eyer_frame":4,"hair_color_b":0.678431391716003,"hair_color_g":0.678431391716003,"hair_color_r":0.678431391716003,"hair_frame":2,"mouth_frame":0,"neck_color_b":0.678431391716003,"neck_color_g":0.678431391716003,"neck_color_r":0.678431391716003,"neck_frame":2,"pants_color_b":0.678431391716003,"pants_color_g":0.678431391716003,"pants_color_r":0.678431391716003,"pants_frame":1,"shirt_color_b":0.678431391716003,"shirt_color_g":0.678431391716003,"shirt_color_r":0.678431391716003,"shirt_frame":0,"skin_color_b":0.678431391716003,"skin_color_g":0.678431391716003,"skin_color_r":0.678431391716003}'
+		rand_eye = true
+		hair_frame = randi_range(0, 2)
+		shirt_frame = randi_range(0, 1)
+	rand_move()
 	
 
 func uncontrol():
@@ -358,7 +376,7 @@ func fall():
 	laughing = 0.
 	timer = 0. # techniquement inutile right now si il se relève jamais
 	$CPUParticles2D.visible = false
-	laugh(2.)
+	laugh(3., false)
 
 func dist(p):
 	return sqrt((p.position.x-position.x)**2 + (p.position.y-position.y)**2)
@@ -390,27 +408,30 @@ func is_laughing():
 	return laughing >= 1.
 
 func triggered(rate):
-	print(position, "hahaha")
-	if not is_laughing() and not controlled and not fallen:
-		laughing = move_toward(laughing, 2., rate)
+	if PERSON_TYPE != 3 and not controlled and not fallen:
+		if rate > 0 and not is_laughing() and ghost_cooldown <= 0.1:
+			laughing = move_toward(laughing, 2., rate)
+		elif rate < 0:
+			ghost_cooldown = 1.
+			laughing = move_toward(laughing, 0., -rate)
 
-func get_neighbors():
+func get_neighbors(check_visible=true):
 	var neigh = []
 	for p in get_node("..").get_children():
 		if p != self and dist2(p) <= SPREAD_RADIUS**2:
-			print(p.position, player_is_visible(p))
-			if player_is_visible(p):
+			if not check_visible or player_is_visible(p):
 				neigh.append(p)
 	return neigh
 
-func laugh(rate):
-	for p in get_neighbors():
+func laugh(rate, check_visible=true):
+	for p in get_neighbors(check_visible):
 		var d2 = dist2(p)
 		p.triggered(rate * r0_coef(d2))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	ghost_cooldown = move_toward(ghost_cooldown, 0., delta)
 	# Affichage en avant des players les plus en bas
 	z_index = int(position.y) 
 	if not Engine.is_editor_hint():
@@ -418,19 +439,21 @@ func _process(delta):
 			$CPUParticles2D.visible = is_laughing()
 			if not is_laughing():
 				# Blanc -> magenta
-				modulate = Color(1., min(1.-laughing, 1.), 1.)
+				#modulate = Color(1., min(1.-laughing, 1.), 1.)
 				$Sprite.rotation = 0.1 * sin(distance * 2 )
-				# modulate = Color(1., min(1.-laughing, 1.), 1.)
 
 			else:
 				# Jaune -> noir
-				modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
+				#modulate = Color(max(2.-laughing, 0.), max(2.-laughing, 0.), 0.)
 				timer += delta
 				$Sprite.position.y = SPRITE_POSITION_Y + 4 * sin(timer * minf(laughing, 1.3) * 5)
 			
 				laugh((laughing-1) * SPREAD_RATE_COEF)
 				laughing = move_toward(laughing, 2., delta / LAUGH_TIME)
 				speed = 2-laughing # 1.0 - 0.0 (laugh++ -> speed--)
+			
+			if PERSON_TYPE == 3: # Ghost
+				laugh(-0.2 * SPREAD_RATE_COEF)
 
 
 		# ------------------------------ MOVEMENT ----------------------------------

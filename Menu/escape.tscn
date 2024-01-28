@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cgcjtw1eck748" path="res://icon.svg" id="2_l77yl"]
 
 [node name="Escape" type="Control"]
+top_level = true
+z_index = 4096
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
