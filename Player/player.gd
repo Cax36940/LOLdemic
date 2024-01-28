@@ -460,6 +460,7 @@ func _process(delta):
 
 		# ------------------------------ MOVEMENT ----------------------------------
 			if controlled:
+				$Sprite.rotation = 0
 				var input_direction = Input.get_vector("left", "right", "up", "down")
 				move_and_collide(input_direction * speed * MAX_SPEED * delta)
 			elif not laughing >= 2:

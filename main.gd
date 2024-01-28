@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var level_name : String
+const LEVEL_LIST = ["hospital", "school", "birthday", "wedding", "ehpad", "cemetery"]
 enum {NO_BUTTON, CONTROL, CONTAMINATE, BANANA, GHOST}
 var GOAL = 0
 var interface = null
@@ -25,6 +26,20 @@ func _ready():
 func _process(delta):
 	if score_has_started:
 		score += delta * SCORE_PER_SEC
+
+func next_level():
+	interface.queue_free()
+	level.queue_free()
+	var level_changed = false
+	for i in range(len(LEVEL_LIST)-1):
+		if level_name == LEVEL_LIST[i]:
+			level_name = LEVEL_LIST[i+1]
+			level_changed = true
+			break
+	if level_changed:
+		load_game()
+	else:
+		add_child(load("res://Menu/menu.tscn").instantiate())
 
 func _input(event):
 	if event.is_action_released("escape"):
@@ -129,6 +144,7 @@ func is_input_contaminate():
 
 func load_game():
 	score = SCORE_INIT
+	print(level_name)
 	level = load("res://Levels/level_" + level_name + ".tscn").instantiate()
 	$LevelLoader.add_child(level)
 	level.name = "Level_Base"
