@@ -347,7 +347,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2ex8s")
 
 [node name="Level_Hospital" type="Node2D"]
-metadata/GOAL = 10
+metadata/GOAL = 3
 
 [node name="Background" type="Node2D" parent="."]
 
