@@ -461,6 +461,7 @@ func _process(delta):
 
 		# ------------------------------ MOVEMENT ----------------------------------
 			if controlled:
+				$Sprite.rotation = 0
 				var input_direction = Input.get_vector("left", "right", "up", "down")
 				move_and_collide(input_direction * speed * MAX_SPEED * delta)
 			elif not laughing >= 2:
@@ -473,7 +474,7 @@ func _process(delta):
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if (event is InputEventMouseButton and event.pressed and not fallen):
 		var main = get_node("/root/World")
-		if main.is_input_contaminate():
+		if main.is_input_contaminate() and PERSON_TYPE!=3:
 			if laughing < 1.:
 				laughing = 1.
 			else:
